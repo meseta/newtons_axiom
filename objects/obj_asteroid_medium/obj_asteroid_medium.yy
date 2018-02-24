@@ -1,28 +1,28 @@
 {
-    "id": "0857967b-e90b-4855-a91c-7366a02dd631",
+    "id": "ffa3d00b-5937-45e0-ba85-2a4235565e74",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "obj_asteroid_big",
+    "name": "obj_asteroid_medium",
     "eventList": [
         
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": [
         {
-            "id": "d76aa305-e306-4e2b-9eac-1f000156001d",
+            "id": "7ed71fd3-98d7-43e0-8570-f27456cd7b4e",
             "modelName": "GMOverriddenProperty",
             "mvc": "1.0",
             "objectId": "8c1b5694-749f-4588-954c-a574b4b9fe33",
             "propertyId": "4f8ac703-fa37-4f81-b374-adb3da571781",
-            "value": "200"
+            "value": "100"
         },
         {
-            "id": "2652ee98-3cb9-41f8-ae44-b949cbd61db5",
+            "id": "4560466c-9022-4065-a459-2a616ffdf386",
             "modelName": "GMOverriddenProperty",
             "mvc": "1.0",
             "objectId": "8c1b5694-749f-4588-954c-a574b4b9fe33",
             "propertyId": "e00e25cd-29cb-45d5-9589-1904d858c4d5",
-            "value": "200"
+            "value": "50"
         }
     ],
     "parentObjectId": "8c1b5694-749f-4588-954c-a574b4b9fe33",
@@ -41,6 +41,6 @@
     "physicsStartAwake": true,
     "properties": null,
     "solid": false,
-    "spriteId": "ea402f6a-a9c9-4448-b3c3-b4e34a94dbd4",
+    "spriteId": "6c81bbe9-2068-40d1-bdbf-db736baf7354",
     "visible": true
 }

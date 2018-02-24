@@ -1,6 +1,6 @@
 /// @description Cotrol inputs
 
-if(control_target != noone) {
+if(instance_exists(control_target)) {
 	var mouse_timeout = 90;
 
 	var key_right = max(keyboard_check(vk_right), keyboard_check(ord("D")), 0);

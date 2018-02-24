@@ -1,5 +1,7 @@
 randomize();
 
+global.debug = 1 or debug_mode
+
 enum SHIPTYPES {
 	mothership,
 	miner,

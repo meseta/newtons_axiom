@@ -23,6 +23,16 @@
             "enumb": 0,
             "eventtype": 0,
             "m_owner": "8c1b5694-749f-4588-954c-a574b4b9fe33"
+        },
+        {
+            "id": "07cd10db-ee11-49a6-aa0c-df429aacff8e",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 8,
+            "m_owner": "8c1b5694-749f-4588-954c-a574b4b9fe33"
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
@@ -43,20 +53,6 @@
     "physicsStartAwake": true,
     "properties": [
         {
-            "id": "a572c752-e552-4c0e-aa8f-b66afdb87063",
-            "modelName": "GMObjectProperty",
-            "mvc": "1.0",
-            "listItems": null,
-            "multiselect": false,
-            "rangeEnabled": false,
-            "rangeMax": 10,
-            "rangeMin": 0,
-            "resourceFilter": 1023,
-            "value": "100",
-            "varName": "resource",
-            "varType": 0
-        },
-        {
             "id": "4f8ac703-fa37-4f81-b374-adb3da571781",
             "modelName": "GMObjectProperty",
             "mvc": "1.0",
@@ -71,7 +67,7 @@
             "varType": 0
         },
         {
-            "id": "fa47f20a-2524-4dc9-80c2-0116b41192e9",
+            "id": "e00e25cd-29cb-45d5-9589-1904d858c4d5",
             "modelName": "GMObjectProperty",
             "mvc": "1.0",
             "listItems": null,
@@ -80,9 +76,37 @@
             "rangeMax": 10,
             "rangeMin": 0,
             "resourceFilter": 1023,
-            "value": "10",
-            "varName": "fric",
+            "value": "100",
+            "varName": "max_hp",
             "varType": 0
+        },
+        {
+            "id": "81d658ea-6852-425d-8a9f-254fa443119f",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "5",
+            "varName": "max_spd",
+            "varType": 0
+        },
+        {
+            "id": "ab97b4db-34be-4c93-832b-d1252c4b5af5",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "True",
+            "varName": "damagable",
+            "varType": 3
         }
     ],
     "solid": false,

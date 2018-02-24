@@ -1,6 +1,6 @@
 /// @description Camera position
 
-if(control_target != noone) {
+if(instance_exists(control_target)) {
 
 	//Half view size
 	var _vw = camera_get_view_width(view_camera[0]) / 2;

@@ -23,6 +23,16 @@
             "enumb": 0,
             "eventtype": 0,
             "m_owner": "adfe2c1d-a4ee-4e67-863c-5b1110e0a2be"
+        },
+        {
+            "id": "4c4e1f4b-2956-499f-ba62-f9142a226eef",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 8,
+            "m_owner": "adfe2c1d-a4ee-4e67-863c-5b1110e0a2be"
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
@@ -123,7 +133,21 @@
             "rangeMin": 0,
             "resourceFilter": 1023,
             "value": "1",
-            "varName": "drill_speed",
+            "varName": "mining_efficiency",
+            "varType": 0
+        },
+        {
+            "id": "6e46e420-f977-4ccf-8716-663e01b8595b",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0.1",
+            "varName": "mining_speed",
             "varType": 0
         },
         {
@@ -136,7 +160,7 @@
             "rangeMax": 10,
             "rangeMin": 0,
             "resourceFilter": 1023,
-            "value": "1",
+            "value": "1.5",
             "varName": "landing_speed",
             "varType": 0
         }

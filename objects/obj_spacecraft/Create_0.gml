@@ -5,3 +5,5 @@ vspd = 0;
 spd = 0;
 
 hp = max_hp;
+
+hit_damage = 0;

@@ -47,7 +47,6 @@ if(spd > max_speed) {
 
 #region collision with asteroid
 
-
 var collision_inst = instance_place(x+hspd, y+vspd, obj_asteroid);
 
 if(collision_inst != noone) {
@@ -76,6 +75,14 @@ if(collision_inst != noone) {
 	x-=delta_hspd;
 	y-=delta_vspd;
 	
+	// damage
+	var relspd = point_distance(hspd, vspd, collision_inst.hspd, collision_inst.vspd)
+	if(relspd > landing_speed) {
+		var dmg = mass * collision_inst.mass * relspd / 500
+		hit_damage += dmg;
+		collision_inst.hit_damage += dmg;
+	}
+	
 	// elastic collision
 	var this_spd = scr_2dcollide(id, collision_inst);
 	var other_spd = scr_2dcollide(collision_inst, id);
@@ -84,10 +91,37 @@ if(collision_inst != noone) {
 	vspd = this_spd[1]*0.5;
 	collision_inst.hspd = other_spd[0]*0.5;
 	collision_inst.vspd = other_spd[1]*0.5;
-	
 }
 
 x += hspd;
 y += vspd;
 
 #endregion collision
+
+#region damage
+
+if(hit_damage) {
+	hp -= hit_damage;
+	hit_damage = 0;
+	
+	if(hp < 0) {
+		instance_destroy();	
+	}
+}
+
+#endregion damage
+
+#region mining
+
+if(mining_efficiency > 1) {
+	var collision_inst = collision_circle( x, x,  bbox_right-bbox_left, obj_mine, true, true);
+	if(collision_inst != noone) {
+	    if(collision_inst.resource > 0) {
+			var collect = min(collision_inst.resource, mining_speed);
+			collision_inst.resource -= collect;
+			global.game_data[? "metals"] += collect * mining_efficiency;
+		}
+	}
+}
+
+#endregion mining

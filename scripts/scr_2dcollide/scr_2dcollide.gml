@@ -1,3 +1,4 @@
+// from: http://williamecraver.wixsite.com/elastic-equations
 var body1 = argument0
 var body2 = argument1
 
