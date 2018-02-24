@@ -125,6 +125,20 @@
             "value": "1",
             "varName": "drill_speed",
             "varType": 0
+        },
+        {
+            "id": "043e048f-5fe9-48eb-a167-666a6b66b735",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "1",
+            "varName": "landing_speed",
+            "varType": 0
         }
     ],
     "solid": false,

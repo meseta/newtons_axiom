@@ -1,10 +1,19 @@
 {
-    "id": "8c1b5694-749f-4588-954c-a574b4b9fe33",
+    "id": "49ffc5e6-bec7-4bdd-b5eb-b8338cd6aaf4",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "obj_minable",
+    "name": "obj_ui_resources",
     "eventList": [
-        
+        {
+            "id": "18e44bf1-6cf2-4dba-8b9d-757f623abe80",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 64,
+            "eventtype": 8,
+            "m_owner": "49ffc5e6-bec7-4bdd-b5eb-b8338cd6aaf4"
+        }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,
@@ -22,22 +31,7 @@
     "physicsShape": 1,
     "physicsShapePoints": null,
     "physicsStartAwake": true,
-    "properties": [
-        {
-            "id": "a572c752-e552-4c0e-aa8f-b66afdb87063",
-            "modelName": "GMObjectProperty",
-            "mvc": "1.0",
-            "listItems": null,
-            "multiselect": false,
-            "rangeEnabled": false,
-            "rangeMax": 10,
-            "rangeMin": 0,
-            "resourceFilter": 1023,
-            "value": "100",
-            "varName": "resource",
-            "varType": 0
-        }
-    ],
+    "properties": null,
     "solid": false,
     "spriteId": "00000000-0000-0000-0000-000000000000",
     "visible": true
