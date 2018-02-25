@@ -1,31 +1,59 @@
 /// @description movement and control
 
 // movement
-if(not player) { // AI
+if(obj_control_player.control_target != id) { // AI: boids
+	// state space weightings
+	switch(state) {
+		case SHIPSTATE.nominal:
+			var m1=1;
+			var m2=1;
+			var m3=1;
+			var m4=1;
+			break;
+		
+	}
+	
+	var vector = ds_list_create();
+	ds_list_add(vector, 0, 0);
+	scr_boid_rule1(vector, m1); // fly towards center of mass
+	scr_boid_rule2(vector, m2); // avoid others and asteroids
+	scr_boid_rule2(vector, m3); // maintain group velocity
+	scr_boid_rule2(vector, m4); // follow player controller
 
-}
-else {
-
+	move_amount = min(1, point_distance(0, 0, vector[| 0], vector[| 1]));
+	if(abs(move_amount > 0)) {
+		move_dir = point_direction(0, 0, vector[| 0], vector[| 1]);
+	}
+	
+	ds_list_destroy(vector);
 }
 
 /*aim_dir
 act_primary
-act_secondary
-move_dir
-move_amount*/
+act_secondary*/
 
 #region movement
 var hforce = lengthdir_x(move_amount * thrust, move_dir);
 var vforce = lengthdir_y(move_amount * thrust, move_dir);
 
-hforce -= sign(hspd) * hspd*hspd * fric;
-vforce -= sign(vspd) * vspd*vspd * fric;
+// sneaky friction/damping
+if(sign(hforce) != sign(hspd)) {
+	hforce -= sign(hspd) * hspd*hspd * fric;
+}
+if(sign(vforce) != sign(vspd)) {
+	vforce -= sign(vspd) * vspd*vspd * fric;
+}
 
-var haccel = hforce/mass;
-var vaccel = vforce/mass
-
-hspd += haccel;
-vspd += vaccel;
+if(mass) {
+	var haccel = hforce/mass;
+	var vaccel = vforce/mass
+	hspd += haccel;
+	vspd += vaccel;
+}
+else {
+	hspd = 0;
+	vspd = 0;
+}
 
 if(move_amount == 0) {
 	if(abs(hspd) < 0.1) hspd = 0;
@@ -40,6 +68,7 @@ if(spd > max_speed) {
 	vspd = lengthdir_y(max_speed, dir);
 	spd = max_speed;
 }
+scr_debug(spd);
 
 
 
@@ -78,7 +107,13 @@ if(collision_inst != noone) {
 	// damage
 	var relspd = point_distance(hspd, vspd, collision_inst.hspd, collision_inst.vspd)
 	if(relspd > landing_speed) {
-		var dmg = mass * collision_inst.mass * relspd / 500
+		if(collision_inst.mass) {
+			var other_mass = collision_inst.mass;	
+		}
+		else {
+			var other_mass = 250;	
+		}
+		var dmg = mass * other_mass * relspd / 500
 		hit_damage += dmg;
 		collision_inst.hit_damage += dmg;
 	}
@@ -113,14 +148,28 @@ if(hit_damage) {
 
 #region mining
 
-if(mining_efficiency > 1) {
-	var collision_inst = collision_circle( x, x,  bbox_right-bbox_left, obj_mine, true, true);
+if(mining_efficiency > 0) {
+	var collision_inst = collision_circle(x, y, max(16, bbox_right-bbox_left), obj_mine, true, true);
 	if(collision_inst != noone) {
-	    if(collision_inst.resource > 0) {
-			var collect = min(collision_inst.resource, mining_speed);
-			collision_inst.resource -= collect;
-			global.game_data[? "metals"] += collect * mining_efficiency;
+		
+		// delay start of mining
+		mining_delay += 1
+		
+		if(mining_delay > 30) {
+			// collect resources
+		    if(collision_inst.resource > 0) {
+				var collect = min(collision_inst.resource, mining_speed);
+				collision_inst.resource -= collect;
+				global.game_data[? "metals"] += collect * mining_efficiency;
+			}
+		
+			// increase movement friction to slow down
+			hspd *= 0.9;
+			vspd *= 0.9;
 		}
+	}
+	else {
+		mining_delay = 0;	
 	}
 }
 

@@ -4,10 +4,10 @@
 // Inherit the parent event
 event_inherited();
 
-if(global.debug and damagable) {
+if(global.debug) {
 	draw_set_color(c_blue);
 	draw_set_font(fnt_ui);
 	draw_set_halign(fa_center);
 	draw_set_valign(fa_middle);
-	draw_text(x, y+20, string(resource) + "/" + string(max_resource));
+	draw_text(x, y, string(resource) + "/" + string(max_resource));
 }

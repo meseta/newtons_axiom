@@ -1,36 +1,44 @@
 {
-    "id": "e74cf998-b9a3-4084-bb95-c84c6844242d",
+    "id": "132409a2-575a-42bb-893d-2aad44bc62b7",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "obj_mothership",
+    "name": "obj_miner",
     "eventList": [
         
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": [
         {
-            "id": "5f4bb854-94a6-43e0-9ba7-db048913ad56",
+            "id": "600dfbef-544d-4c3c-920f-2f06a97d79f0",
             "modelName": "GMOverriddenProperty",
             "mvc": "1.0",
             "objectId": "adfe2c1d-a4ee-4e67-863c-5b1110e0a2be",
             "propertyId": "3b893058-14fa-4a77-9cee-603a0c99926d",
-            "value": "20"
+            "value": "5"
         },
         {
-            "id": "2dd8e6c7-4fa5-415d-8c9e-1147bc731f70",
+            "id": "7823d4a8-32da-46b4-bf0d-c8d4705a2819",
             "modelName": "GMOverriddenProperty",
             "mvc": "1.0",
             "objectId": "adfe2c1d-a4ee-4e67-863c-5b1110e0a2be",
             "propertyId": "d7cd72aa-802b-4785-8430-bab3fbbc20c1",
-            "value": "1"
+            "value": "0.1"
         },
         {
-            "id": "3658c0c6-4e6e-4ccf-aaf0-afbb1ce0182c",
+            "id": "2f58daa8-0a6f-4d42-91bd-d9da565ed0a3",
             "modelName": "GMOverriddenProperty",
             "mvc": "1.0",
             "objectId": "adfe2c1d-a4ee-4e67-863c-5b1110e0a2be",
             "propertyId": "b3e3372b-d202-4883-a25b-82a70efe4aa1",
-            "value": "100"
+            "value": "10"
+        },
+        {
+            "id": "1773a428-21c7-4519-bc23-6f4f749c3f72",
+            "modelName": "GMOverriddenProperty",
+            "mvc": "1.0",
+            "objectId": "adfe2c1d-a4ee-4e67-863c-5b1110e0a2be",
+            "propertyId": "043e048f-5fe9-48eb-a167-666a6b66b735",
+            "value": "3"
         }
     ],
     "parentObjectId": "adfe2c1d-a4ee-4e67-863c-5b1110e0a2be",
@@ -49,6 +57,6 @@
     "physicsStartAwake": true,
     "properties": null,
     "solid": false,
-    "spriteId": "ad94037d-2426-4436-8943-ceee47b76aa7",
+    "spriteId": "f9b1ba68-d2df-4cdc-bc2d-73dd100f604a",
     "visible": true
 }

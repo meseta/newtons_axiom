@@ -90,7 +90,7 @@
             "rangeMax": 10,
             "rangeMin": 0,
             "resourceFilter": 1023,
-            "value": "100",
+            "value": "10",
             "varName": "max_hp",
             "varType": 0
         },
@@ -104,7 +104,7 @@
             "rangeMax": 10,
             "rangeMin": 0,
             "resourceFilter": 1023,
-            "value": "8",
+            "value": "6",
             "varName": "max_speed",
             "varType": 0
         },
@@ -146,7 +146,7 @@
             "rangeMax": 10,
             "rangeMin": 0,
             "resourceFilter": 1023,
-            "value": "0.1",
+            "value": "0.02",
             "varName": "mining_speed",
             "varType": 0
         },

@@ -32,7 +32,7 @@ for(var i=0; i<ds_list_size(shiplist); i++) {
     }
 	
 	// default controller selects first player mothership
-	if(obj_control_player.control_target == noone and type == SHIPTYPES.mothership and ship_inst.player) {
+	if(obj_control_player.control_target == noone and type == SHIPTYPES.mothership and ship_inst.faction == FACTIONS.player) {
 		obj_control_player.control_target = ship_inst;
 		obj_control_player.x = xx;
 		obj_control_player.y = yy;
