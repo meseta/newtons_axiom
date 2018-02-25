@@ -9,7 +9,7 @@ if(obj_control_player.control_target != id) { // AI: boids
 	var m2=0.3;
 	var m3=2;
 	var m4=5;
-	var m5=0.5;
+	var m5=1;
 	var m6=0.1;
 	
 	var vector = ds_list_create();
@@ -154,7 +154,19 @@ if(hit_damage) {
 	hit_damage = 0;
 	
 	if(hp < 0) {
-		instance_destroy();	
+		
+		if(faction == FACTIONS.hostile) {
+			for(var i=0; i<ceil(max_hp/10); i++) {
+				var drop = choose(obj_pickup_health, obj_pickup_part, noone, noone);
+				if(drop != noone) {
+					var drop_inst = instance_create_layer(x, y, "Projectiles", drop);
+					drop_inst.hspd = hspd + random_range(-2, 2);
+					drop_inst.vspd = vspd + random_range(-2, 2);
+				}
+			}
+		}
+		
+		instance_destroy();
 	}
 }
 

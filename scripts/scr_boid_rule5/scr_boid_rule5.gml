@@ -39,8 +39,8 @@ if(mining_speed > 0 and instance_exists(obj_control_player.control_target) and o
 		}
 		
 		if(closest_mothership != noone) {
-			xvect = (closest_mothership.x - x)*2;
-			yvect = (closest_mothership.y - y)*2;
+			xvect = (closest_mothership.x - x);
+			yvect = (closest_mothership.y - y);
 		}
 		
 		// if close to a mine, get a boost away from it (prevents getting stuck to it)
@@ -54,8 +54,8 @@ if(mining_speed > 0 and instance_exists(obj_control_player.control_target) and o
 	}
 	else if(closest_mine != noone) { // instance nearby, go to it
 		var dir = point_direction(x, y, closest_mine.x, closest_mine.y);
-		xvect = lengthdir_x(closest_mine_range, dir);
-		yvect = lengthdir_y(closest_mine_range, dir);
+		xvect = lengthdir_x(closest_mine_range, dir)*5;
+		yvect = lengthdir_y(closest_mine_range, dir)*5;
 	}
 	
 	vector[| 0] += xvect * weight;

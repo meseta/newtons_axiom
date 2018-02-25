@@ -11,7 +11,16 @@ if(mass) {
 		hit_damage = 0;
 	
 		if(hp < 0) {
-			instance_destroy();	
+			for(var i=0; i<ceil(max_hp/50); i++) {
+				var drop = choose(obj_pickup_part, noone);
+				if(drop != noone) {
+					var drop_inst = instance_create_layer(x, y, "Projectiles", drop);
+					drop_inst.hspd = hspd + random_range(-2, 2);
+					drop_inst.vspd = vspd + random_range(-2, 2);
+				}
+			}
+			
+			instance_destroy();
 		}
 	}
 }
