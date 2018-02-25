@@ -11,13 +11,14 @@ if(mining_speed > 0 and instance_exists(obj_control_player.control_target) and o
 
 	with(obj_mine) { // fetch all mines and select closesst with resources
 		if(resource > 0) {
-			var range = distance_to_point(obj_control_player.control_target.x, obj_control_player.control_target.y);
+			var range = point_distance(x, y, obj_control_player.control_target.x, obj_control_player.control_target.y);
 			if(range < max_range_to_player) {
 				if(closest_mine == noone or range < closest_mine_range) {
 					closest_mine = id;
 					closest_mine_range = range;
 				}
 			}
+			scr_debug(range);
 		}
 	}
 
@@ -49,7 +50,6 @@ if(mining_speed > 0 and instance_exists(obj_control_player.control_target) and o
 			if(closest_mine_range < 1) closest_mine_range = 1;
 			xvect -= lengthdir_x(1000/closest_mine_range, dir);
 			yvect -= lengthdir_y(1000/closest_mine_range, dir);
-			scr_debug("repel", closest_mine_range)
 		}*/
 		
 	}

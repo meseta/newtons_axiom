@@ -23,7 +23,3 @@ if(global.debug) {
 		draw_circle(x, y, max(16, bbox_right-bbox_left), true);	
 	}
 }
-
-if(faction == FACTIONS.hostile) {
-	scr_debug("hostile at ", x, ", ", y);	
-}

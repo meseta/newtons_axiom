@@ -23,7 +23,7 @@ if(obj_control_player.control_target != id) { // AI: boids
 		
 		#region cursor
 		if(position_meeting(mouse_x, mouse_y, id)) {
-			window_set_cursor(cr_handpoint);
+			global.cursor_ship = true;
 		}
 		#endregion cursor
 	}

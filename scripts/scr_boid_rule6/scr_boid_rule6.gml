@@ -51,11 +51,9 @@ if(weapon != noone) {
 			xvect = x - closest_target.x;
 			yvect = y - closest_target.y;
 		}
-		else if(not disengage and closest_range > attack_max_range) { // too far, close in
+		if(not disengage and closest_range > attack_max_range and object_index != obj_mothership) { // too far, close in
 			xvect = closest_target.x - x;
 			yvect = closest_target.y - y;
-			
-			
 		}
 		
 		vector[| 0] += xvect * weight;

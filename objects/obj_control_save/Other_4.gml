@@ -5,20 +5,11 @@ var shiplist = ds_map_find_value(global.game_data, "shiplist");
 for(var i=0; i<ds_list_size(shiplist); i++) {
 	var ship = ds_list_find_value(shiplist, i);
 	
-	// select layer to spawn ship into
-	var type = ds_map_find_value(ship, "type");
-	var target_layer = "Ships";
-	switch(type) {
-		case SHIPTYPES.mothership:
-		case SHIPTYPES.battleship:
-			target_layer = "Bigships";
-			break;
-	}
-	
 	// create inst
+	var type = ds_map_find_value(ship, "type");
 	var xx = ds_map_find_value(ship, "x");
 	var yy = ds_map_find_value(ship, "y");
-	var ship_inst = instance_create_layer(xx, yy, target_layer, global.ship_obj_lookup[type]);
+	var ship_inst = scr_spawn_ship(xx, yy, type);
 	
 	// set instace vars
 	var key = undefined;
