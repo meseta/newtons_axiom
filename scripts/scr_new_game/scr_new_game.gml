@@ -1,8 +1,14 @@
 global.game_data = ds_map_create();
 
 // resources
-ds_map_add(global.game_data, "metals", 100);
-ds_map_add(global.game_data, "parts", 5);
+if(global.debug or 1) {
+	ds_map_add(global.game_data, "metals", 1000);
+	ds_map_add(global.game_data, "parts", 50);
+}
+else {
+	ds_map_add(global.game_data, "metals", 100);
+	ds_map_add(global.game_data, "parts", 5);
+}
 
 // ships
 var shiplist = ds_list_create();

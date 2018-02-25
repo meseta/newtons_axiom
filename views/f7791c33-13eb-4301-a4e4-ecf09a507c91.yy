@@ -7,7 +7,9 @@
         "ad94037d-2426-4436-8943-ceee47b76aa7",
         "f9b1ba68-d2df-4cdc-bc2d-73dd100f604a",
         "058ba89f-ae95-4466-9baa-666c0848831e",
-        "5a2cdfab-30cb-47ca-ae0e-fbc540a66f86"
+        "5a2cdfab-30cb-47ca-ae0e-fbc540a66f86",
+        "c4d8f30d-1392-443d-b448-67aee957dbf8",
+        "09812ba2-8d0c-4046-9997-8ccb6150ccee"
     ],
     "filterType": "GMSprite",
     "folderName": "ships",

@@ -1,15 +1,15 @@
 {
-    "id": "e74cf998-b9a3-4084-bb95-c84c6844242d",
+    "id": "4899d8bf-8913-4c21-964f-ac9686f06dfb",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "obj_mothership",
+    "name": "obj_destroyer",
     "eventList": [
         
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": [
         {
-            "id": "5f4bb854-94a6-43e0-9ba7-db048913ad56",
+            "id": "47c0c149-c5a8-4086-b4c0-8cba623f16b9",
             "modelName": "GMOverriddenProperty",
             "mvc": "1.0",
             "objectId": "adfe2c1d-a4ee-4e67-863c-5b1110e0a2be",
@@ -17,7 +17,7 @@
             "value": "20"
         },
         {
-            "id": "2dd8e6c7-4fa5-415d-8c9e-1147bc731f70",
+            "id": "edb87474-a52b-4c0b-aa12-77ab0f33cea3",
             "modelName": "GMOverriddenProperty",
             "mvc": "1.0",
             "objectId": "adfe2c1d-a4ee-4e67-863c-5b1110e0a2be",
@@ -25,23 +25,15 @@
             "value": "1"
         },
         {
-            "id": "3658c0c6-4e6e-4ccf-aaf0-afbb1ce0182c",
+            "id": "a56dc7ae-697b-4cc9-84b1-44e24990d2b0",
             "modelName": "GMOverriddenProperty",
             "mvc": "1.0",
             "objectId": "adfe2c1d-a4ee-4e67-863c-5b1110e0a2be",
             "propertyId": "b3e3372b-d202-4883-a25b-82a70efe4aa1",
-            "value": "100"
+            "value": "30"
         },
         {
-            "id": "c8ba5244-5b9e-4393-90fb-390f7059a76e",
-            "modelName": "GMOverriddenProperty",
-            "mvc": "1.0",
-            "objectId": "adfe2c1d-a4ee-4e67-863c-5b1110e0a2be",
-            "propertyId": "6e46e420-f977-4ccf-8716-663e01b8595b",
-            "value": "0.02"
-        },
-        {
-            "id": "0ef6e4e5-30da-4525-8785-3633c9a6e5b8",
+            "id": "82d354ed-c9cf-4dd5-9a6e-9d8f464fab5c",
             "modelName": "GMOverriddenProperty",
             "mvc": "1.0",
             "objectId": "adfe2c1d-a4ee-4e67-863c-5b1110e0a2be",
@@ -49,15 +41,15 @@
             "value": "obj_cannon"
         },
         {
-            "id": "fbef289a-c989-4ba3-a27d-ae6604db5041",
+            "id": "d1de3b14-9261-4279-bff5-c3fd983a1a34",
             "modelName": "GMOverriddenProperty",
             "mvc": "1.0",
             "objectId": "adfe2c1d-a4ee-4e67-863c-5b1110e0a2be",
             "propertyId": "a8bd0dfa-ce6f-484b-9097-c762fb75cefc",
-            "value": "30"
+            "value": "20"
         },
         {
-            "id": "b8136c43-c42a-4a22-9a34-c0658c9556da",
+            "id": "7703f160-76c4-4ea3-b9b6-26aaa2227980",
             "modelName": "GMOverriddenProperty",
             "mvc": "1.0",
             "objectId": "adfe2c1d-a4ee-4e67-863c-5b1110e0a2be",
@@ -65,7 +57,7 @@
             "value": "30"
         },
         {
-            "id": "85a4741c-6f79-43d0-908b-9bc769a1a943",
+            "id": "b9a8f1c6-27fc-4846-a0dd-f9ce1c8ab22e",
             "modelName": "GMOverriddenProperty",
             "mvc": "1.0",
             "objectId": "adfe2c1d-a4ee-4e67-863c-5b1110e0a2be",
@@ -87,10 +79,8 @@
     "physicsShape": 1,
     "physicsShapePoints": null,
     "physicsStartAwake": true,
-    "properties": [
-        
-    ],
+    "properties": null,
     "solid": false,
-    "spriteId": "ad94037d-2426-4436-8943-ceee47b76aa7",
+    "spriteId": "c4d8f30d-1392-443d-b448-67aee957dbf8",
     "visible": true
 }
