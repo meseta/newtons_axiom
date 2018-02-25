@@ -1,27 +1,33 @@
 /// @description movement and control
 
+
+#region boid
 // movement
 if(obj_control_player.control_target != id) { // AI: boids
 	// state space weightings
-	switch(state) {
-		case SHIPSTATE.nominal:
-			var m1=1;
-			var m2=0.2;
-			var m3=2;
-			var m4=5;
-			var m5=0.2;
-			break;
-		
-		
-	}
+	var m1=0.5;
+	var m2=0.3;
+	var m3=2;
+	var m4=5;
+	var m5=0.1;
+	var m6=3;
 	
 	var vector = ds_list_create();
 	ds_list_add(vector, 0, 0);
 	scr_boid_rule1(vector, m1); // fly towards center of mass
 	scr_boid_rule2(vector, m2); // avoid units and asteroids
 	scr_boid_rule3(vector, m3); // maintain group velocity
-	scr_boid_rule4(vector, m4); // follow player controller
-	scr_boid_rule5(vector, m5); // mining
+	if(faction == FACTIONS.player) {
+		scr_boid_rule4(vector, m4); // follow player controller
+		scr_boid_rule5(vector, m5); // mining
+		
+		#region cursor
+		if(position_meeting(mouse_x, mouse_y, id)) {
+			window_set_cursor(cr_handpoint);
+		}
+		#endregion cursor
+	}
+	scr_boid_rule6(vector, m6); // charge at hostiles
 
 	move_amount = min(1, point_distance(0, 0, vector[| 0], vector[| 1])/20);
 	if(abs(move_amount > 0)) {
@@ -31,9 +37,7 @@ if(obj_control_player.control_target != id) { // AI: boids
 	ds_list_destroy(vector);
 }
 
-/*aim_dir
-act_primary
-act_secondary*/
+#endregion boid
 
 #region movement
 var hforce = lengthdir_x(move_amount * thrust, move_dir);
@@ -112,8 +116,8 @@ if(collision_inst != noone) {
 	var relspd = point_distance(hspd, vspd, collision_inst.hspd, collision_inst.vspd)
 	var allowed_landing_speed = landing_speed;
 	
-	if(mining_speed > 0 and object_is_ancestor(collision_inst, obj_mine)) { // special case: miners get triple landing speed on mines
-		allowed_landing_speed *= 3;
+	if(mining_speed > 0 and object_is_ancestor(collision_inst.object_index, obj_mine)) { // special case: miners get triple landing speed on mines
+		allowed_landing_speed *= 2;
 	}
 	
 	if(relspd > allowed_landing_speed) {
@@ -201,3 +205,23 @@ if(mining_speed > 0) {
 }
 
 #endregion mining
+
+#region attacking
+	fire_timer += 1;
+	
+	if(weapon != noone and act_primary and fire_timer > fire_rate) {
+		fire_timer = 0;
+		var projectile = instance_create_layer(x, y, "Projectiles", weapon);
+		projectile.aim_dir = aim_dir + random_range(-5, 5);
+		projectile.add_hspd = hspd;
+		projectile.add_vspd = vspd;
+		projectile.faction = faction;
+		
+		// recoil
+		var recoil_dampening = 3;
+		hspd -= lengthdir_x(projectile.spd, aim_dir)*projectile.mass/(mass*recoil_dampening);
+		vspd -= lengthdir_y(projectile.spd, aim_dir)*projectile.mass/(mass*recoil_dampening);
+	}
+#endregion
+
+sprite_timer += 1;

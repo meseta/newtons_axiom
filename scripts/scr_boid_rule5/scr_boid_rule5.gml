@@ -3,7 +3,7 @@
 var vector = argument0;
 var weight = argument1;
 
-if(mining_speed > 0 and instance_exists(obj_control_player.control_target)) {
+if(mining_speed > 0 and instance_exists(obj_control_player.control_target) and object_index != obj_mothership) {
 	var max_range_to_player = 200;
 	
 	var closest_mine = noone;
@@ -55,7 +55,6 @@ if(mining_speed > 0 and instance_exists(obj_control_player.control_target)) {
 	}
 	else if(closest_mine != noone) { // instance nearby, go to it
 		var dir = point_direction(x, y, closest_mine.x, closest_mine.y);
-		closest_mine_range *= closest_mine_range/max_range_to_player; // square to reduce thrust at close range
 		xvect = lengthdir_x(closest_mine_range, dir);
 		yvect = lengthdir_y(closest_mine_range, dir);
 	}

@@ -16,6 +16,8 @@ act_secondary = 0;
 move_dir = 0;
 move_amount = 0;
 
-state = SHIPSTATE.nominal
-
 cargo = 0;
+
+sprite_timer = 0;
+
+fire_timer = 0;

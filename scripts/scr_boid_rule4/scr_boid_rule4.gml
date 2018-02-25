@@ -5,7 +5,7 @@ var weight = argument1;
 
 var xdelta = 0;
 var ydelta = 0;
-var max_range = 300;
+var max_range = 600;
 
 if(faction == FACTIONS.player) {
 	if(instance_exists(obj_control_player.control_target)) {

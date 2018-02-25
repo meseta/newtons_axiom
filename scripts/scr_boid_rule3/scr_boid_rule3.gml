@@ -8,7 +8,6 @@ var vgroup = 0;
 var count = 0;
 var range = 300;
 
-
 // calculate group
 with(obj_spacecraft) {
 	if(id != other.id and faction == other.faction) {
@@ -20,7 +19,9 @@ with(obj_spacecraft) {
 	}
 }
 
-var hdelta = hgroup/count - hspd;
-var vdelta = vgroup/count - vspd;
-vector[| 0] += hdelta * weight;
-vector[| 1] += vdelta * weight;
+if(count) {
+	var hdelta = hgroup/count - hspd;
+	var vdelta = vgroup/count - vspd;
+	vector[| 0] += hdelta * weight;
+	vector[| 1] += vdelta * weight;
+}

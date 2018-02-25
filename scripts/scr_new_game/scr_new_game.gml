@@ -40,7 +40,17 @@ repeat(5) {
 	ds_list_add(shiplist, ship);
 }
 
-
+repeat(3) {
+	var ship = ds_map_create();
+	ds_map_add(ship, "type", SHIPTYPES.enemy_fighter);
+	ds_map_add(ship, "health", 10);
+	ds_map_add(ship, "x", 600 + irandom(100));
+	ds_map_add(ship, "y", 170 + irandom(100));
+	ds_map_add(ship, "hspd", 0);
+	ds_map_add(ship, "yspd", 0);
+	ds_map_add(ship, "faction", FACTIONS.hostile);
+	ds_list_add(shiplist, ship);
+}
 
 
 ds_list_mark_as_map(shiplist, ds_list_size(shiplist)-1);

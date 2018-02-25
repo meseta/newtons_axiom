@@ -11,11 +11,8 @@ for(var i=0; i<ds_list_size(shiplist); i++) {
 	switch(type) {
 		case SHIPTYPES.mothership:
 		case SHIPTYPES.battleship:
-			targt_layer = "Bigships";
+			target_layer = "Bigships";
 			break;
-		case SHIPTYPES.asteroid:
-			targt_layer = "Asteroids";
-			break;	
 	}
 	
 	// create inst

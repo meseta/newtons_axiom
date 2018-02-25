@@ -1,6 +1,6 @@
 randomize();
 
-global.debug = 1 or debug_mode
+global.debug = 0 or debug_mode
 
 enum SHIPTYPES {
 	mothership,
@@ -10,18 +10,15 @@ enum SHIPTYPES {
 	frigate,
 	battleship,
 	
-	asteroid,
+	enemy_fighter
 }
 
 global.ship_obj_lookup[SHIPTYPES.mothership] = obj_mothership;
 global.ship_obj_lookup[SHIPTYPES.miner] = obj_miner;
 global.ship_obj_lookup[SHIPTYPES.fighter] = obj_fighter;
 
-enum SHIPSTATE {
-	nominal,
-	mine,
-	ferry
-}
+
+global.ship_obj_lookup[SHIPTYPES.enemy_fighter] = obj_enemy_fighter;
 
 enum FACTIONS {
 	hostile,
