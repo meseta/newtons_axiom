@@ -1,28 +1,44 @@
 {
-    "id": "edbf905b-2d83-4370-ad9a-8edc3525a87c",
+    "id": "4a89e60c-6c0e-4b49-a496-98fc633f6a2e",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "obj_enemy_destroyer",
+    "name": "obj_frigate",
     "eventList": [
         
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": [
         {
-            "id": "a5cd4c52-1826-4f7a-b2cc-9c755f2a6eef",
+            "id": "970fb22d-cc31-49da-9371-924bfedcd9bd",
+            "modelName": "GMOverriddenProperty",
+            "mvc": "1.0",
+            "objectId": "adfe2c1d-a4ee-4e67-863c-5b1110e0a2be",
+            "propertyId": "594bc0ea-b539-4786-a32b-2c0543caa3bc",
+            "value": "obj_missile"
+        },
+        {
+            "id": "0602e709-d571-4cbc-9375-65b95e52fae8",
             "modelName": "GMOverriddenProperty",
             "mvc": "1.0",
             "objectId": "adfe2c1d-a4ee-4e67-863c-5b1110e0a2be",
             "propertyId": "a8bd0dfa-ce6f-484b-9097-c762fb75cefc",
-            "value": "30"
+            "value": "60"
         },
         {
-            "id": "a3235e7b-a431-416f-af67-95523b1eb535",
+            "id": "98f3c2cb-4259-4986-b46d-dfd902d763d4",
             "modelName": "GMOverriddenProperty",
             "mvc": "1.0",
             "objectId": "adfe2c1d-a4ee-4e67-863c-5b1110e0a2be",
-            "propertyId": "8e75b386-b665-419b-953e-89061fa51ea9",
-            "value": "4"
+            "propertyId": "9320699c-026e-4cce-83de-99842daa384b",
+            "value": "50"
+        },
+        {
+            "id": "f2923092-35fc-4bcb-a4e7-4e49223f01e8",
+            "modelName": "GMOverriddenProperty",
+            "mvc": "1.0",
+            "objectId": "adfe2c1d-a4ee-4e67-863c-5b1110e0a2be",
+            "propertyId": "3eef4c8e-96e0-40a6-8e0e-1e4085c67052",
+            "value": "300"
         }
     ],
     "parentObjectId": "4899d8bf-8913-4c21-964f-ac9686f06dfb",
@@ -41,6 +57,6 @@
     "physicsStartAwake": true,
     "properties": null,
     "solid": false,
-    "spriteId": "09812ba2-8d0c-4046-9997-8ccb6150ccee",
+    "spriteId": "404d9d59-ea7e-4ddd-b19d-c8123dd2d288",
     "visible": true
 }

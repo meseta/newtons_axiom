@@ -87,6 +87,14 @@
             }
         },
         {
+            "Key": "0aa7f89e-d879-4429-8ae8-86a52518ce87",
+            "Value": {
+                "id": "7dfb13cc-9acf-47ee-9c81-40c6562ad8ee",
+                "resourcePath": "sprites\\spr_battleship\\spr_battleship.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "0afe9f5d-2b57-4162-9e3a-bcc165fb6003",
             "Value": {
                 "id": "8a07f003-5c01-4fd4-90b2-1e3e8ecec32e",
@@ -119,11 +127,27 @@
             }
         },
         {
+            "Key": "132b15d8-ea81-4c7f-983b-8efd107ec19e",
+            "Value": {
+                "id": "663ea269-7a71-4d4f-91bb-fa2ae519e67c",
+                "resourcePath": "objects\\obj_battleship\\obj_battleship.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "1525cf91-b9d9-49af-b95c-425b290f6db8",
             "Value": {
                 "id": "1a47a543-a7e3-4f04-8a67-604017e7462c",
                 "resourcePath": "views\\1525cf91-b9d9-49af-b95c-425b290f6db8.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "169c5aa2-ac12-4cba-bcef-5ed1989838a0",
+            "Value": {
+                "id": "42f6f651-ea97-4d26-b40c-634e109a3636",
+                "resourcePath": "objects\\obj_ui_button_build_frigate\\obj_ui_button_build_frigate.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -223,6 +247,30 @@
             }
         },
         {
+            "Key": "3968ff40-1603-4fa4-9970-672118556bab",
+            "Value": {
+                "id": "9b765c0a-6d7f-480d-8714-10e7f8e2cdeb",
+                "resourcePath": "objects\\obj_missile\\obj_missile.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "3b1d4a58-d7bf-43b4-a751-40a2e49565dd",
+            "Value": {
+                "id": "93e007e8-4e34-42e5-a863-00b5803a96a3",
+                "resourcePath": "sprites\\spr_missile\\spr_missile.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "404d9d59-ea7e-4ddd-b19d-c8123dd2d288",
+            "Value": {
+                "id": "98d24af0-7936-4acf-a1e0-1a5f46950e45",
+                "resourcePath": "sprites\\spr_frigate\\spr_frigate.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "442d437d-9adf-495d-81de-e0ed930a9fd0",
             "Value": {
                 "id": "5ac35c80-4765-48b8-90bc-2a2d32a804f5",
@@ -275,6 +323,14 @@
             "Value": {
                 "id": "20b7e752-cdc6-43bd-9abe-00787f1ba216",
                 "resourcePath": "objects\\obj_ui_resources\\obj_ui_resources.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "4a89e60c-6c0e-4b49-a496-98fc633f6a2e",
+            "Value": {
+                "id": "75d8e403-3754-4796-afd7-ad14e437cb55",
+                "resourcePath": "objects\\obj_frigate\\obj_frigate.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -479,6 +535,14 @@
             }
         },
         {
+            "Key": "9425fe63-aa33-4b2b-b86a-a2a81670005b",
+            "Value": {
+                "id": "63c0a56f-2b99-405b-a226-c99f4932c663",
+                "resourcePath": "sprites\\spr_enemy_frigate\\spr_enemy_frigate.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "951491b4-80ed-401f-b4e5-afe5fc761238",
             "Value": {
                 "id": "59859d0d-fc8f-47d2-8a32-6f4d3fb2a985",
@@ -516,6 +580,22 @@
                 "id": "be54d98a-d7ed-4c26-ba87-807b2afdc4b6",
                 "resourcePath": "scripts\\scr_new_game\\scr_new_game.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "a3532858-0278-48be-a0f2-fb8e151a2212",
+            "Value": {
+                "id": "a32f5755-0e72-4620-8eed-bd862355d8b8",
+                "resourcePath": "objects\\obj_enemy_frigate\\obj_enemy_frigate.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "a7ae007f-93c2-4e8b-b6cf-c9d9cc2241ea",
+            "Value": {
+                "id": "4d78c106-1f3d-4174-8fdb-823dcdf52c9f",
+                "resourcePath": "sprites\\spr_enemy_battleship\\spr_enemy_battleship.yy",
+                "resourceType": "GMSprite"
             }
         },
         {

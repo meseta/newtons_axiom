@@ -1,31 +1,31 @@
 {
-    "id": "edbf905b-2d83-4370-ad9a-8edc3525a87c",
+    "id": "169c5aa2-ac12-4cba-bcef-5ed1989838a0",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "obj_enemy_destroyer",
+    "name": "obj_ui_button_build_frigate",
     "eventList": [
         
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": [
         {
-            "id": "a5cd4c52-1826-4f7a-b2cc-9c755f2a6eef",
+            "id": "352503b5-cd06-4d3a-b500-708b269e9f30",
             "modelName": "GMOverriddenProperty",
             "mvc": "1.0",
-            "objectId": "adfe2c1d-a4ee-4e67-863c-5b1110e0a2be",
-            "propertyId": "a8bd0dfa-ce6f-484b-9097-c762fb75cefc",
-            "value": "30"
+            "objectId": "02e8b945-bdb5-4a7a-8427-697589a1150b",
+            "propertyId": "cf9a0d2d-a5a7-4ec6-a89c-e497c19ff4de",
+            "value": "SHIPTYPES.frigate"
         },
         {
-            "id": "a3235e7b-a431-416f-af67-95523b1eb535",
+            "id": "b10293bc-d94c-416f-b03e-6b694cb3c910",
             "modelName": "GMOverriddenProperty",
             "mvc": "1.0",
-            "objectId": "adfe2c1d-a4ee-4e67-863c-5b1110e0a2be",
-            "propertyId": "8e75b386-b665-419b-953e-89061fa51ea9",
-            "value": "4"
+            "objectId": "02e8b945-bdb5-4a7a-8427-697589a1150b",
+            "propertyId": "a16c42bb-6874-43d4-a2b1-e6c0784a2386",
+            "value": "Frigate"
         }
     ],
-    "parentObjectId": "4899d8bf-8913-4c21-964f-ac9686f06dfb",
+    "parentObjectId": "02e8b945-bdb5-4a7a-8427-697589a1150b",
     "persistent": false,
     "physicsAngularDamping": 0.1,
     "physicsDensity": 0.5,
@@ -41,6 +41,6 @@
     "physicsStartAwake": true,
     "properties": null,
     "solid": false,
-    "spriteId": "09812ba2-8d0c-4046-9997-8ccb6150ccee",
+    "spriteId": "dd4483ba-e70a-4061-bef8-3f2b54d894ac",
     "visible": true
 }

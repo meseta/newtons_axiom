@@ -1,23 +1,23 @@
 {
-    "id": "edbf905b-2d83-4370-ad9a-8edc3525a87c",
+    "id": "a3532858-0278-48be-a0f2-fb8e151a2212",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "obj_enemy_destroyer",
+    "name": "obj_enemy_frigate",
     "eventList": [
         
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": [
         {
-            "id": "a5cd4c52-1826-4f7a-b2cc-9c755f2a6eef",
+            "id": "1b6e4990-e51e-4b91-b16b-6f825483fbf5",
             "modelName": "GMOverriddenProperty",
             "mvc": "1.0",
             "objectId": "adfe2c1d-a4ee-4e67-863c-5b1110e0a2be",
             "propertyId": "a8bd0dfa-ce6f-484b-9097-c762fb75cefc",
-            "value": "30"
+            "value": "80"
         },
         {
-            "id": "a3235e7b-a431-416f-af67-95523b1eb535",
+            "id": "5c4ca09c-0f99-40ab-bd45-4c27538a151d",
             "modelName": "GMOverriddenProperty",
             "mvc": "1.0",
             "objectId": "adfe2c1d-a4ee-4e67-863c-5b1110e0a2be",
@@ -41,6 +41,6 @@
     "physicsStartAwake": true,
     "properties": null,
     "solid": false,
-    "spriteId": "09812ba2-8d0c-4046-9997-8ccb6150ccee",
+    "spriteId": "9425fe63-aa33-4b2b-b86a-a2a81670005b",
     "visible": true
 }

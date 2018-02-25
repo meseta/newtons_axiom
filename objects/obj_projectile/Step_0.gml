@@ -10,6 +10,8 @@ vspd = lengthdir_y(spd, aim_dir) + add_vspd;
 x += hspd;
 y += vspd;
 
+image_angle = aim_dir;
+
 var collision_inst = instance_place(x, y, obj_spacecraft);
 
 if(collision_inst != noone) {
@@ -30,5 +32,8 @@ if(collision_inst != noone) {
 		collision_inst.hspd += hspd*mass/collision_inst.mass;
 		collision_inst.vspd += vspd*mass/collision_inst.mass;
 		instance_destroy();
+	}
+	else {
+		instance_destroy();	
 	}
 }

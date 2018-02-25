@@ -229,6 +229,34 @@
             "value": "75",
             "varName": "attack_max_range",
             "varType": 0
+        },
+        {
+            "id": "33d60a59-2ff2-4ff5-bbb8-957eb46ae9da",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "noone",
+            "varName": "weapon_secondary",
+            "varType": 5
+        },
+        {
+            "id": "d9f37913-7a52-47c6-b52d-b1916c0754c9",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "10",
+            "varName": "fire_rate_secondary",
+            "varType": 1
         }
     ],
     "solid": false,

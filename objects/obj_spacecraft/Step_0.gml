@@ -160,8 +160,8 @@ if(hit_damage) {
 				var drop = choose(obj_pickup_health, obj_pickup_part, noone, noone);
 				if(drop != noone) {
 					var drop_inst = instance_create_layer(x, y, "Projectiles", drop);
-					drop_inst.hspd = hspd + random_range(-2, 2);
-					drop_inst.vspd = vspd + random_range(-2, 2);
+					drop_inst.hspd = hspd + random_range(-1, 1);
+					drop_inst.vspd = vspd + random_range(-1, 1);
 				}
 			}
 		}
@@ -224,6 +224,19 @@ if(mining_speed > 0) {
 	if(weapon != noone and act_primary and fire_timer > fire_rate) {
 		fire_timer = 0;
 		var projectile = instance_create_layer(x, y, "Projectiles", weapon);
+		projectile.aim_dir = aim_dir + random_range(-5, 5);
+		projectile.add_hspd = hspd;
+		projectile.add_vspd = vspd;
+		projectile.faction = faction;
+		
+		// recoil
+		var recoil_dampening = 3;
+		hspd -= lengthdir_x(projectile.spd, aim_dir)*projectile.mass/(mass*recoil_dampening);
+		vspd -= lengthdir_y(projectile.spd, aim_dir)*projectile.mass/(mass*recoil_dampening);
+	}
+	if(weapon_secondary != noone and act_secondary and fire_timer_secondary > fire_rate_secondary) {
+		fire_timer_secondary = 0;
+		var projectile = instance_create_layer(x, y, "Projectiles", weapon_secondary);
 		projectile.aim_dir = aim_dir + random_range(-5, 5);
 		projectile.add_hspd = hspd;
 		projectile.add_vspd = vspd;

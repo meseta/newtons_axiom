@@ -93,6 +93,9 @@ repeat(num_enemy_groups) {
 		
 		switch(diff) {
 			default:
+			case 2: // fighters and destroyers
+				selected_ship = choose(SHIPTYPES.enemy_fighter, SHIPTYPES.enemy_fighter, SHIPTYPES.enemy_destroyer, SHIPTYPES.enemy_frigate);
+				break;
 			case 1: // only fighters possible
 				selected_ship = SHIPTYPES.enemy_fighter;
 				break;
@@ -100,12 +103,16 @@ repeat(num_enemy_groups) {
 		
 		switch(selected_ship) {
 			case SHIPTYPES.enemy_fighter:
-				var new_ship = scr_spawn_ship(xx+random_range(-100,100), yy+random_range(-100,100), selected_ship);
-				new_ship.faction = FACTIONS.hostile;
 				difficulty_total += 1;
-				//scr_debug("spawned fighter");
+				break;
+			case SHIPTYPES.enemy_frigate:
+			case SHIPTYPES.enemy_destroyer:
+				difficulty_total += 2;
 				break;
 		}
+		
+		var new_ship = scr_spawn_ship(xx+random_range(-100,100), yy+random_range(-100,100), selected_ship);
+		new_ship.faction = FACTIONS.hostile;
 	}
 		
 }
