@@ -6,9 +6,9 @@ var weight = argument1;
 var xvect = 0;
 var yvect = 0;
 var msigma = 0;
-var check_range = 50;
-var craft_weight = 25;
-var asteroid_weight = 100;
+var check_range = 100;
+var craft_weight = 50;
+var asteroid_weight = 50;
 
 with(obj_spacecraft) {
 	if(id != other.id) {
@@ -24,16 +24,17 @@ with(obj_spacecraft) {
 	}
 }
 
-
 with(obj_asteroid) {
-	var range = distance_to_object(other);
-	if(range < check_range) {
-		if(range < 1) {
-			range = 1;
+	if(not object_is_ancestor(object_index, obj_mine)) {
+		var range = distance_to_object(other);
+		if(range < check_range) {
+			if(range < 1) {
+				range = 1;
+			}
+			var dir = point_direction(x, y, other.x, other.y);
+			xvect += lengthdir_x(asteroid_weight/range, dir);
+			yvect += lengthdir_y(asteroid_weight/range, dir);
 		}
-		var dir = point_direction(x, y, other.x, other.y);
-		xvect += lengthdir_x(craft_weight/range, dir);
-		yvect += lengthdir_y(craft_weight/range, dir);
 	}
 }
 

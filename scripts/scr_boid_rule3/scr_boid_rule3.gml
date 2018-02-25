@@ -1,4 +1,4 @@
-// fly towards center of mass of neighboring boids
+// maintain same velocity as group
 
 var vector = argument0;
 var weight = argument1;
@@ -6,14 +6,17 @@ var weight = argument1;
 var hgroup = 0;
 var vgroup = 0;
 var count = 0;
+var range = 300;
 
 
-// calculate positions
+// calculate group
 with(obj_spacecraft) {
 	if(id != other.id and faction == other.faction) {
-		hgroup += hspd;
-		vgroup += vspd;
-		count += 1;
+		if(point_distance(x, y, other.x, other.y) < range) {
+			hgroup += hspd;
+			vgroup += vspd;
+			count += 1;
+		}
 	}
 }
 

@@ -12,7 +12,7 @@ if(global.debug) {
 	draw_text(x, y, string(hp) + "/" + string(max_hp));
 	
 	// draw mining circle
-	if(mining_efficiency > 0) {
+	if(mining_speed > 0) {
 		draw_set_color(c_blue);
 		draw_circle(x, y, max(16, bbox_right-bbox_left), true);	
 	}

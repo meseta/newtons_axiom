@@ -123,20 +123,6 @@
             "varType": 0
         },
         {
-            "id": "d77e3397-d9af-4ae6-86aa-8fc0d4b0f63e",
-            "modelName": "GMObjectProperty",
-            "mvc": "1.0",
-            "listItems": null,
-            "multiselect": false,
-            "rangeEnabled": false,
-            "rangeMax": 10,
-            "rangeMin": 0,
-            "resourceFilter": 1023,
-            "value": "1",
-            "varName": "mining_efficiency",
-            "varType": 0
-        },
-        {
             "id": "6e46e420-f977-4ccf-8716-663e01b8595b",
             "modelName": "GMObjectProperty",
             "mvc": "1.0",
@@ -146,7 +132,7 @@
             "rangeMax": 10,
             "rangeMin": 0,
             "resourceFilter": 1023,
-            "value": "0.02",
+            "value": "0",
             "varName": "mining_speed",
             "varType": 0
         },

@@ -6,21 +6,24 @@ if(obj_control_player.control_target != id) { // AI: boids
 	switch(state) {
 		case SHIPSTATE.nominal:
 			var m1=1;
-			var m2=1;
-			var m3=1;
-			var m4=1;
+			var m2=0.2;
+			var m3=2;
+			var m4=5;
+			var m5=0.5;
 			break;
+		
 		
 	}
 	
 	var vector = ds_list_create();
 	ds_list_add(vector, 0, 0);
 	scr_boid_rule1(vector, m1); // fly towards center of mass
-	scr_boid_rule2(vector, m2); // avoid others and asteroids
-	scr_boid_rule2(vector, m3); // maintain group velocity
-	scr_boid_rule2(vector, m4); // follow player controller
+	scr_boid_rule2(vector, m2); // avoid units and asteroids
+	scr_boid_rule3(vector, m3); // maintain group velocity
+	scr_boid_rule4(vector, m4); // follow player controller
+	scr_boid_rule5(vector, m5); // mining
 
-	move_amount = min(1, point_distance(0, 0, vector[| 0], vector[| 1]));
+	move_amount = min(1, point_distance(0, 0, vector[| 0], vector[| 1])/20);
 	if(abs(move_amount > 0)) {
 		move_dir = point_direction(0, 0, vector[| 0], vector[| 1]);
 	}
@@ -68,7 +71,6 @@ if(spd > max_speed) {
 	vspd = lengthdir_y(max_speed, dir);
 	spd = max_speed;
 }
-scr_debug(spd);
 
 
 
@@ -94,9 +96,11 @@ if(collision_inst != noone) {
 	    var dir = point_direction(0, 0, hspd, vspd);
 		var delta_hspd = lengthdir_x(1, dir);
 		var delta_vspd = lengthdir_y(1, dir);
-		while(!place_meeting(x+delta_hspd, y+delta_vspd, collision_inst)) {
+		var tries = floor(spd); // allows phasing through in the case it slightly clips it
+		while(!place_meeting(x+delta_hspd, y+delta_vspd, collision_inst) and tries > 0) {
 			x+=delta_hspd;
 			y+=delta_vspd;
+			tries -= 1;
 		}
 	}
 	
@@ -148,7 +152,7 @@ if(hit_damage) {
 
 #region mining
 
-if(mining_efficiency > 0) {
+if(mining_speed > 0) {
 	var collision_inst = collision_circle(x, y, max(16, bbox_right-bbox_left), obj_mine, true, true);
 	if(collision_inst != noone) {
 		
@@ -160,7 +164,7 @@ if(mining_efficiency > 0) {
 		    if(collision_inst.resource > 0) {
 				var collect = min(collision_inst.resource, mining_speed);
 				collision_inst.resource -= collect;
-				global.game_data[? "metals"] += collect * mining_efficiency;
+				global.game_data[? "metals"] += collect;
 			}
 		
 			// increase movement friction to slow down

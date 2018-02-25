@@ -31,6 +31,14 @@
     },
     "resources": [
         {
+            "Key": "058ba89f-ae95-4466-9baa-666c0848831e",
+            "Value": {
+                "id": "bbf8d37f-d423-48b4-a27b-6840b6b9fa36",
+                "resourcePath": "sprites\\spr_fighter\\spr_fighter.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "068b68f3-d19e-4e65-a9c2-e83ed27979d8",
             "Value": {
                 "id": "1555d513-c1f5-486c-9418-87d4f39b10ad",
@@ -92,6 +100,14 @@
                 "id": "51377c23-0da0-4c2e-b9cf-06f171096e39",
                 "resourcePath": "views\\23ad29a4-41f3-4aea-be5f-327978ab61b8.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "254c8f3c-5f32-4b8f-ab71-c9ba21dd3325",
+            "Value": {
+                "id": "2a1f50a1-492e-4cf1-b31d-ba4052af95c4",
+                "resourcePath": "scripts\\scr_boid_rule5\\scr_boid_rule5.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -359,6 +375,14 @@
             }
         },
         {
+            "Key": "ceead1eb-f0c9-4ab2-ac4d-beebd6a97cd7",
+            "Value": {
+                "id": "56bcd711-5aac-41c0-88bf-9653d501e324",
+                "resourcePath": "objects\\obj_fighter\\obj_fighter.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "d6d194f7-62d0-49c4-807e-5aabb1870ebd",
             "Value": {
                 "id": "1b8b15b0-02fe-48a6-acf1-6c6b1ae2ad11",
@@ -488,7 +512,8 @@
         "c8bcccdf-3e91-4282-9fb8-6f6576e5a3d6",
         "f6174721-54b7-4ed8-b268-f8ac9e05bea3",
         "4499bf93-d341-4de8-9737-292241e67dc1",
-        "442d437d-9adf-495d-81de-e0ed930a9fd0"
+        "442d437d-9adf-495d-81de-e0ed930a9fd0",
+        "254c8f3c-5f32-4b8f-ab71-c9ba21dd3325"
     ],
     "tutorial": ""
 }

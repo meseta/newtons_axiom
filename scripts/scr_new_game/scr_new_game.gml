@@ -16,9 +16,21 @@ ds_map_add(ship, "yspd", 0);
 ds_map_add(ship, "faction", FACTIONS.player);
 ds_list_add(shiplist, ship);
 
-repeat(10) {
+repeat(3) {
 	var ship = ds_map_create();
 	ds_map_add(ship, "type", SHIPTYPES.miner);
+	ds_map_add(ship, "health", 10);
+	ds_map_add(ship, "x", 400 + irandom(100));
+	ds_map_add(ship, "y", 270 + irandom(100));
+	ds_map_add(ship, "hspd", 0);
+	ds_map_add(ship, "yspd", 0);
+	ds_map_add(ship, "faction", FACTIONS.player);
+	ds_list_add(shiplist, ship);
+}
+
+repeat(5) {
+	var ship = ds_map_create();
+	ds_map_add(ship, "type", SHIPTYPES.fighter);
 	ds_map_add(ship, "health", 10);
 	ds_map_add(ship, "x", 400 + irandom(100));
 	ds_map_add(ship, "y", 270 + irandom(100));
