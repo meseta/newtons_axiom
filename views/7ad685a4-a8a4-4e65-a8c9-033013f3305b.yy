@@ -13,7 +13,8 @@
         "edbf905b-2d83-4370-ad9a-8edc3525a87c",
         "4a89e60c-6c0e-4b49-a496-98fc633f6a2e",
         "a3532858-0278-48be-a0f2-fb8e151a2212",
-        "132b15d8-ea81-4c7f-983b-8efd107ec19e"
+        "c13ace48-1090-4ffc-9a45-96eef3ee4bee",
+        "b3776be7-f4ee-4ba2-8c06-661774b02307"
     ],
     "filterType": "GMObject",
     "folderName": "ships",

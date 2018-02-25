@@ -28,10 +28,10 @@ else { // has x
 // spawn new mines
 if(block_new) {
 	var num_mines = 0;
-	if(block_resource == 0) num_mines = 0;
-	else if(block_resource < 30) num_mines = 1
+	if(block_resource < 20) num_mines = 0;
+	else if(block_resource < 40) num_mines = 1
 	else if(block_resource < 60) num_mines = 2
-	else if(block_resource < 85) num_mines = 3
+	else if(block_resource < 80) num_mines = 3
 	else num_mines = 4
 	
 	repeat(num_mines) {

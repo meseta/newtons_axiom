@@ -127,14 +127,6 @@
             }
         },
         {
-            "Key": "132b15d8-ea81-4c7f-983b-8efd107ec19e",
-            "Value": {
-                "id": "663ea269-7a71-4d4f-91bb-fa2ae519e67c",
-                "resourcePath": "objects\\obj_battleship\\obj_battleship.yy",
-                "resourceType": "GMObject"
-            }
-        },
-        {
             "Key": "1525cf91-b9d9-49af-b95c-425b290f6db8",
             "Value": {
                 "id": "1a47a543-a7e3-4f04-8a67-604017e7462c",
@@ -639,6 +631,14 @@
             }
         },
         {
+            "Key": "b3776be7-f4ee-4ba2-8c06-661774b02307",
+            "Value": {
+                "id": "9389e167-373b-4c5f-9b83-f01c91eedb85",
+                "resourcePath": "objects\\obj_enemy_battleship\\obj_enemy_battleship.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "b9fcd948-d45b-4777-be78-3fe2e1a536e3",
             "Value": {
                 "id": "759ffd9b-bd41-463c-b25a-9e9f36d181c6",
@@ -652,6 +652,14 @@
                 "id": "31ef9aa6-dc00-49db-8aeb-9dd3b60d16a5",
                 "resourcePath": "scripts\\scr_2dcollide\\scr_2dcollide.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "c13ace48-1090-4ffc-9a45-96eef3ee4bee",
+            "Value": {
+                "id": "4e086afd-4a33-4e8e-80c4-bbce45ee2450",
+                "resourcePath": "objects\\obj_battleship\\obj_battleship.yy",
+                "resourceType": "GMObject"
             }
         },
         {
