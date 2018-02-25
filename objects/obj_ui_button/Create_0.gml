@@ -6,6 +6,7 @@ image_speed = 0;
 xx = x;
 yy = y;
 
+can_use = true;
 toggle = false;
 tooltip_show = false;
 if(not variable_instance_exists(id, "tooltip_text")) {

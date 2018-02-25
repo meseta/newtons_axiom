@@ -21,7 +21,7 @@ global.ship_obj_lookup[SHIPTYPES.fighter] = obj_fighter;
 global.ship_obj_lookup[SHIPTYPES.enemy_fighter] = obj_enemy_fighter;
 
 global.ship_build_metals[SHIPTYPES.miner] = 50;
-global.ship_build_parts[SHIPTYPES.miner] = 0;
+global.ship_build_parts[SHIPTYPES.miner] = 1;
 
 global.ship_build_metals[SHIPTYPES.fighter] = 30;
 global.ship_build_parts[SHIPTYPES.fighter] = 0;
