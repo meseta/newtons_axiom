@@ -4,7 +4,7 @@ var vector = argument0;
 var weight = argument1;
 
 if(mining_speed > 0 and instance_exists(obj_control_player.control_target) and object_index != obj_mothership) {
-	var max_range_to_player = 200;
+	var max_range_to_player = 250;
 	
 	var closest_mine = noone;
 	var closest_mine_range = 0;
@@ -18,7 +18,6 @@ if(mining_speed > 0 and instance_exists(obj_control_player.control_target) and o
 					closest_mine_range = range;
 				}
 			}
-			scr_debug(range);
 		}
 	}
 
@@ -40,8 +39,8 @@ if(mining_speed > 0 and instance_exists(obj_control_player.control_target) and o
 		}
 		
 		if(closest_mothership != noone) {
-			xvect = closest_mothership.x - x;
-			yvect = closest_mothership.y - y;
+			xvect = (closest_mothership.x - x)*2;
+			yvect = (closest_mothership.y - y)*2;
 		}
 		
 		// if close to a mine, get a boost away from it (prevents getting stuck to it)

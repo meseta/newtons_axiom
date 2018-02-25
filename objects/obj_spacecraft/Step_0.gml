@@ -9,8 +9,8 @@ if(obj_control_player.control_target != id) { // AI: boids
 	var m2=0.3;
 	var m3=2;
 	var m4=5;
-	var m5=0.1;
-	var m6=3;
+	var m5=0.5;
+	var m6=0.1;
 	
 	var vector = ds_list_create();
 	ds_list_add(vector, 0, 0);
@@ -193,7 +193,7 @@ if(mining_speed > 0) {
 			cargo = 0;
 		}
 		else {
-			var collision_inst = collision_circle(x, y, max(16, bbox_right-bbox_left), obj_mothership, false, true);
+			var collision_inst = collision_circle(x, y, 16, obj_mothership, false, true);
 			if(collision_inst != noone) {
 				if(collision_inst.faction == faction) {
 					global.game_data[? "metals"] += cargo;

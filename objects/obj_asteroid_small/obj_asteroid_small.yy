@@ -2,7 +2,7 @@
     "id": "d8ffdd59-df14-42dc-b387-21b8cf46511e",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "obj_asteroid_smallm1",
+    "name": "obj_asteroid_small",
     "eventList": [
         
     ],

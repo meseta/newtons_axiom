@@ -33,4 +33,7 @@ enum FACTIONS {
 }
 
 global.cursor_ui = false;
+global.cursor_ship = false;
+
+#macro BLOCKSIZE 2000
 

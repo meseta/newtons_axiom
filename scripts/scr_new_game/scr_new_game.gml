@@ -57,3 +57,6 @@ repeat(3) {
 ds_list_mark_as_map(shiplist, ds_list_size(shiplist)-1);
 
 ds_map_add_list(global.game_data, "shiplist", shiplist);
+
+var block_spawned = ds_map_create();
+ds_map_add_map(global.game_data, "block_spawned", block_spawned)

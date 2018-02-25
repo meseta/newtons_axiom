@@ -5,9 +5,9 @@ var weight = argument1;
 
 if(weapon != noone) {
 	// select nearest opposing
-	var max_range_hostile = 1000;
+	var max_range_hostile = 500;
 	var max_range_asteroid = 300;
-	var max_range_disengage = 800;
+	var max_range_disengage = 500;
 	
 	var closest_target = noone;
 	var closest_range = 0;
@@ -25,7 +25,7 @@ if(weapon != noone) {
 		}
 	}
 	
-	if(closest_target == noone) { // second priority target asteroids
+	if(closest_target == noone and faction == FACTIONS.player) { // second priority target asteroids
 		with(obj_asteroid) { // cycle through ships
 			var range = distance_to_object(other);
 			if(not object_is_ancestor(object_index, obj_mine) and range < max_range_asteroid) { // effective range for asteroids

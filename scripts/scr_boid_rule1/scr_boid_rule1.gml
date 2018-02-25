@@ -6,7 +6,7 @@ var weight = argument1;
 var xcenter = 0;
 var ycenter = 0;
 var msigma = 0;
-var max_range = 1000;
+var max_range = 500;
 
 var selected_ships = ds_list_create();
 
