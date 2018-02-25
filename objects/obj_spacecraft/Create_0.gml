@@ -17,3 +17,5 @@ move_dir = 0;
 move_amount = 0;
 
 state = SHIPSTATE.nominal
+
+cargo = 0;

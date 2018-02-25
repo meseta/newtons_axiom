@@ -25,16 +25,14 @@ with(obj_spacecraft) {
 }
 
 with(obj_asteroid) {
-	if(not object_is_ancestor(object_index, obj_mine)) {
-		var range = distance_to_object(other);
-		if(range < check_range) {
-			if(range < 1) {
-				range = 1;
-			}
-			var dir = point_direction(x, y, other.x, other.y);
-			xvect += lengthdir_x(asteroid_weight/range, dir);
-			yvect += lengthdir_y(asteroid_weight/range, dir);
+	var range = distance_to_object(other);
+	if(range < check_range) {
+		if(range < 1) {
+			range = 1;
 		}
+		var dir = point_direction(x, y, other.x, other.y);
+		xvect += lengthdir_x(asteroid_weight/range, dir);
+		yvect += lengthdir_y(asteroid_weight/range, dir);
 	}
 }
 

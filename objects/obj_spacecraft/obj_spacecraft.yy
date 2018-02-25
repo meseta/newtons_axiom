@@ -149,6 +149,20 @@
             "value": "1.5",
             "varName": "landing_speed",
             "varType": 0
+        },
+        {
+            "id": "93537c5d-3511-47c6-869a-5247f157bc56",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "10",
+            "varName": "max_cargo",
+            "varType": 0
         }
     ],
     "solid": false,
