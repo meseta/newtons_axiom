@@ -97,6 +97,20 @@
             "value": "0.2",
             "varName": "mass",
             "varType": 0
+        },
+        {
+            "id": "4ef0b255-fa03-4d67-8c02-50f48d66630b",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "particles",
+            "varType": 0
         }
     ],
     "solid": false,

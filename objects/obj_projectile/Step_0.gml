@@ -19,6 +19,8 @@ if(collision_inst != noone) {
 		collision_inst.hit_damage += damage
 		collision_inst.hspd += hspd*mass/collision_inst.mass;
 		collision_inst.vspd += vspd*mass/collision_inst.mass;
+		
+		part_particles_create_color(global.partexplode_sys, x, y, global.partexplode, c_yellow, particles)	
 		instance_destroy();
 	}
 }
@@ -27,6 +29,7 @@ if(collision_inst != noone) {
 var collision_inst = instance_place(x, y, obj_asteroid);
 
 if(collision_inst != noone) {
+	part_particles_create_color(global.partexplode_sys, x, y, global.partexplode, c_yellow, particles)	
 	if(collision_inst.damagable) {
 		collision_inst.hit_damage += damage
 		collision_inst.hspd += hspd*mass/collision_inst.mass;
@@ -34,6 +37,6 @@ if(collision_inst != noone) {
 		instance_destroy();
 	}
 	else {
-		instance_destroy();	
+		instance_destroy();
 	}
 }

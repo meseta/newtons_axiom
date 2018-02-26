@@ -6,18 +6,6 @@ if(instance_exists(control_target)) {
 	var _vw = camera_get_view_width(view_camera[0]) / 2;
 	var _vh = camera_get_view_height(view_camera[0]) / 2;
 	
-	//Screenshake
-	if(global.screenshake > 0) {
-		global.screenshake -= 0.5;
-		global.screenshake = clamp(global.screenshake, 0, 10);
-		_vw += irandom_range(-global.screenshake, global.screenshake);
-		_vh += irandom_range(-global.screenshake, global.screenshake);
-				
-		gamepad_set_vibration(0,global.screenshake/2,global.screenshake/2);
-	} else {
-		gamepad_set_vibration(0,0,0);
-	}
-	
 	//Look ahead
 	var _maxAhead = 32;
 

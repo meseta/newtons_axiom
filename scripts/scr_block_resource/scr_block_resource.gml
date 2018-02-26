@@ -6,7 +6,7 @@ tmp = (tmp * 9821 + 6925) mod 65535
 tmp += input_y
 tmp = (tmp * 9821 + 6925) mod 100
 
-tmp += ceil(point_distance(0, 0, input_x, input_y));
+tmp += ceil(point_distance(0, 0, input_x, input_y)*2);
 
 // special case, starting location
 if(input_x == 0 and input_y == 0) {

@@ -1,5 +1,16 @@
 /// @description movement and control
 
+#region particle_color
+if(faction == FACTIONS.player) {
+	if(object_index = obj_mothership) part_color = c_teal;
+	else if(object_index = obj_miner) part_color = c_olive;
+	else part_color = c_green;
+}
+else {
+	part_color = c_red;
+}
+
+#endregion particle_color
 
 #region boid
 // movement
@@ -143,6 +154,8 @@ if(collision_inst != noone) {
 		var dmg = mass * other_mass * relspd / 750
 		hit_damage += dmg;
 		collision_inst.hit_damage += dmg;
+		
+		part_particles_create_color(global.partexplode_sys, x, y, global.partexplode, c_gray, clamp(hit_damage, 5, 30))
 	}
 	
 	// elastic collision
@@ -160,21 +173,13 @@ y += vspd;
 
 var effective_spd = point_distance(xprevious, yprevious, x, y);
 if(effective_spd > 0.5) {
-	if(faction == FACTIONS.player) {
-		var part_color = c_green;
-	}
-	else {
-		var part_color = c_red;
-	}
+
 	var hdelta = (x-xprevious)/ceil(effective_spd);
 	var vdelta = (y-yprevious)/ceil(effective_spd);
 	for(var i=0; i<ceil(effective_spd); i++ ) {
-		if(object_index == obj_mothership or object_index == obj_battleship) {
+		if(object_index == obj_mothership or object_index == obj_battleship or object_index == obj_enemy_battleship) {
 			part_particles_create_color(global.parttrail_sys, xprevious+i*hdelta + lengthdir_x(5, image_angle+90), yprevious+i*vdelta + lengthdir_y(5, image_angle+90), global.parttrail, part_color, 1)
 			part_particles_create_color(global.parttrail_sys, xprevious+i*hdelta + lengthdir_x(-5, image_angle+90), yprevious+i*vdelta + lengthdir_y(-5, image_angle+90), global.parttrail, part_color, 1)
-		}
-		else if(object_index == obj_miner) {
-			part_particles_create_color(global.parttrail_sys, xprevious+i*hdelta, yprevious+i*vdelta, global.parttrail, c_olive, 1)	
 		}
 		else {
 			part_particles_create_color(global.parttrail_sys, xprevious+i*hdelta, yprevious+i*vdelta, global.parttrail, part_color, 1)		
@@ -193,7 +198,7 @@ if(hit_damage) {
 	
 	hit_damage = 0;
 	
-	if(hp < 0) {
+	if(hp <= 0) {
 		
 		if(faction == FACTIONS.hostile) {
 			for(var i=0; i<ceil(max_hp/10); i++) {
@@ -208,8 +213,21 @@ if(hit_damage) {
 			global.game_data[? "score"] += max_hp;
 		}
 		
+		repeat(10) {
+			part_particles_create_color(global.partexplode_sys, x, y, global.partexplode, c_gray, max_hp)
+			part_particles_create_color(global.partexplode_sys, x, y, global.partexplode, part_color, max_hp)
+		}
 		instance_destroy();
 	}
+}
+
+if(hp < 0.75 * max_hp) {
+	var factor = 50*(0.75-hp/max_hp)/0.75;
+	
+	if(irandom(100) < factor) {
+		part_particles_create_color(global.partsmoke_sys, x, y, global.partsmoke, c_gray, 1)
+	}
+	
 }
 
 #endregion damage
@@ -230,9 +248,16 @@ if(mining_speed > 0) {
 				collision_inst.resource -= collect;
 				cargo += collect;
 				
+				var dir_from = point_direction(collision_inst.x, collision_inst.y, x, y) 
+				var ww = (collision_inst.bbox_right - collision_inst.bbox_left)/2;
+				var xx = collision_inst.x + lengthdir_x(ww, dir_from);
+				var yy = collision_inst.y + lengthdir_y(ww, dir_from);
+				
+				part_particles_create_color(global.partexplode_sys, xx, yy, global.partexplode, c_purple, 1)	
+				
 				// increase movement friction to slow down
-				hspd *= 0.9;
-				vspd *= 0.9;
+				hspd *= 0.95;
+				vspd *= 0.95;
 				
 				unit_shake = 1;
 			}
