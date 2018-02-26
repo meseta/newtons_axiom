@@ -17,6 +17,7 @@ if(place_meeting(x, y, obj_asteroid)) {
 if(instance_exists(obj_control_player.control_target)) {
 	if(place_meeting(x, y, obj_control_player.control_target)) {
 		global.game_data[? "parts"] += 1
+		global.game_data[? "score"] += 10;
 		instance_destroy();
 	}
 }

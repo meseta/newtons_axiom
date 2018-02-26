@@ -20,6 +20,7 @@ if(mass) {
 				}
 			}
 			
+			global.game_data[? "score"] += max_hp/2;
 			instance_destroy();
 		}
 	}

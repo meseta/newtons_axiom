@@ -5,9 +5,9 @@ var weight = argument1;
 
 if(weapon != noone) {
 	// select nearest opposing
-	var max_range_hostile = 500;
+	var max_range_hostile = 300;
 	var max_range_asteroid = 300;
-	var max_range_disengage = 500;
+	var max_range_disengage = 300;
 	
 	var closest_target = noone;
 	var closest_range = 0;

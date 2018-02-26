@@ -1,5 +1,7 @@
 global.game_data = ds_map_create();
 
+ds_map_add(global.game_data, "score", 0);
+	
 // resources
 if(global.debug or 1) {
 	ds_map_add(global.game_data, "metals", 3000);

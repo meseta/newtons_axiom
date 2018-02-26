@@ -161,8 +161,8 @@ if(instance_exists(obj_control_player.control_target)) {
 				
 				
 			// set up next spawn
-			var time_constant = (100-current_block_hostility)*10
-			ship_spawn_timeout = 8*60 + random(time_constant)
+			var time_constant = (100-current_block_hostility)*20
+			ship_spawn_timeout = 10*60 + random(time_constant)
 			scr_debug("ship timeout", ship_spawn_timeout);
 		}
 	}

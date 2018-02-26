@@ -6,9 +6,9 @@ var weight = argument1;
 var xvect = 0;
 var yvect = 0;
 var msigma = 0;
-var check_range = 150;
+var check_range = 300;
 var craft_weight = 50;
-var asteroid_weight = 1000;
+var asteroid_weight = 500;
 
 with(obj_spacecraft) {
 	if(id != other.id) {

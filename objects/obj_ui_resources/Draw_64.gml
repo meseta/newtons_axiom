@@ -6,3 +6,5 @@ draw_set_halign(fa_left);
 draw_set_valign(fa_bottom);
 draw_text(120, window_get_height()-12, "Metals: " + string(max(0, floor(ds_map_find_value(global.game_data, "metals")))));
 draw_text(240, window_get_height()-12, "Parts: " + string(max(0, floor(ds_map_find_value(global.game_data, "parts")))));
+
+draw_text(640, window_get_height()-12, "Score: " + string(floor(ds_map_find_value(global.game_data, "score"))));

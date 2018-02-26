@@ -8,7 +8,7 @@ if(obj_control_player.control_target != id) { // AI: boids
 	var m1=0.5;
 	var m2=0.3;
 	var m3=2;
-	var m4=5;
+	var m4=20;
 	var m5=1;
 	var m6=0.1;
 	
@@ -128,7 +128,7 @@ if(collision_inst != noone) {
 	var allowed_landing_speed = landing_speed;
 	
 	if(mining_speed > 0 and object_is_ancestor(collision_inst.object_index, obj_mine)) { // special case: miners get triple landing speed on mines
-		allowed_landing_speed *= 2;
+		allowed_landing_speed *= 3;
 	}
 	
 	if(relspd > allowed_landing_speed) {
@@ -178,6 +178,8 @@ if(hit_damage) {
 					drop_inst.vspd = vspd + random_range(-1, 1);
 				}
 			}
+			
+			global.game_data[? "score"] += max_hp;
 		}
 		
 		instance_destroy();
@@ -218,6 +220,7 @@ if(mining_speed > 0) {
 	if(cargo > 0) { // switch cargo
 		if(object_index == obj_mothership and faction = FACTIONS.player) { // is already mothership,
 			global.game_data[? "metals"] += cargo;
+			global.game_data[? "score"] += cargo;
 			cargo = 0;
 		}
 		else {
@@ -225,6 +228,7 @@ if(mining_speed > 0) {
 			if(collision_inst != noone) {
 				if(collision_inst.faction == faction) {
 					global.game_data[? "metals"] += cargo;
+					global.game_data[? "score"] += cargo;
 					cargo = 0;
 				}
 			}
