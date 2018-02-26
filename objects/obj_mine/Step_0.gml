@@ -4,7 +4,6 @@
 // Inherit the parent event
 event_inherited();
 
-image_speed = 0;
-
-rspd = 0;
-resource = max_resource
+if(image_number > 1) {
+	image_index = ceil((image_number-1) * (1-resource/max_resource));
+}
