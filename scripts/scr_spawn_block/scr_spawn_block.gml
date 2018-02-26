@@ -91,14 +91,17 @@ repeat(num_enemy_groups) {
 		var diff = enemy_difficulty - difficulty_total;
 		var selected_ship = noone;
 		
-		switch(diff) {
-			default:
-			case 2: // fighters and destroyers
-				selected_ship = choose(SHIPTYPES.enemy_fighter, SHIPTYPES.enemy_fighter, SHIPTYPES.enemy_destroyer, SHIPTYPES.enemy_frigate);
-				break;
-			case 1: // only fighters possible
-				selected_ship = SHIPTYPES.enemy_fighter;
-				break;
+		if(diff < 2) {
+			selected_ship = SHIPTYPES.enemy_fighter;
+		}
+		else if(diff < 5) {
+			selected_ship = choose(SHIPTYPES.enemy_fighter, SHIPTYPES.enemy_fighter, SHIPTYPES.enemy_destroyer, SHIPTYPES.enemy_frigate);
+		}
+		else if(diff < 10) {
+			selected_ship = choose(SHIPTYPES.enemy_destroyer, SHIPTYPES.enemy_frigate, SHIPTYPES.enemy_battleship);
+		}
+		else {
+			selected_ship = SHIPTYPES.enemy_battleship
 		}
 		
 		switch(selected_ship) {
@@ -109,6 +112,8 @@ repeat(num_enemy_groups) {
 			case SHIPTYPES.enemy_destroyer:
 				difficulty_total += 2;
 				break;
+			case SHIPTYPES.enemy_battleship:
+				difficulty_total += 4;		
 		}
 		
 		var new_ship = scr_spawn_ship(xx+random_range(-100,100), yy+random_range(-100,100), selected_ship);

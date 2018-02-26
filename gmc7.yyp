@@ -151,6 +151,14 @@
             }
         },
         {
+            "Key": "1d86b606-96b7-4b58-a424-d2efae9a69e0",
+            "Value": {
+                "id": "42bf3d44-1b25-4b84-9e32-c846a18dc402",
+                "resourcePath": "objects\\obj_ui_button_build_battleship\\obj_ui_button_build_battleship.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "2108fe83-dac7-4114-8888-6f3dc5d20c4e",
             "Value": {
                 "id": "2005ff93-4c51-4b68-a9ec-74b79c687b0a",

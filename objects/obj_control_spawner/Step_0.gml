@@ -144,7 +144,7 @@ if(instance_exists(obj_control_player.control_target)) {
 				var ship_choice = choose(SHIPTYPES.enemy_fighter, SHIPTYPES.enemy_fighter, SHIPTYPES.enemy_destroyer, SHIPTYPES.enemy_frigate);
 			}
 			else {
-				var ship_choice = choose(SHIPTYPES.enemy_fighter, SHIPTYPES.enemy_destroyer, SHIPTYPES.enemy_frigate)
+				var ship_choice = choose(SHIPTYPES.enemy_destroyer, SHIPTYPES.enemy_frigate, SHIPTYPES.enemy_battleship)
 			}
 			
 			var spawn_dir = random(360);
