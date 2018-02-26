@@ -8,3 +8,4 @@ rspd = random_range(-3, 3);
 
 hp = max_hp;
 hit_damage = 0;
+resource = 0;

@@ -1,6 +1,12 @@
 randomize();
 
+global.savename = "data.json"
+global.hiscorename = "hiscore.json"
 global.debug = 0 or debug_mode
+global.new_game = false;
+global.highscore = 0;
+
+scr_load_hiscore();
 
 enum SHIPTYPES {
 	mothership,

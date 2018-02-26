@@ -12,3 +12,5 @@ camera_h = camera_get_view_height(view_camera[0])
 base_aspect = camera_w/camera_h;
 global.screenshake = 0;
 camera_speed = 0.05;
+
+gameover_timer = 0;

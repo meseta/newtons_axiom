@@ -10,8 +10,9 @@ switch(type) {
 		target_layer = "Bigships";
 		break;
 }
-	
+
 // create inst
 var ship_inst = instance_create_layer(xx, yy, target_layer, global.ship_obj_lookup[type]);
+ship_inst.type = type
 
 return ship_inst

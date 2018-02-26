@@ -8,3 +8,4 @@ draw_text(120, window_get_height()-12, "Metals: " + string(max(0, floor(ds_map_f
 draw_text(240, window_get_height()-12, "Parts: " + string(max(0, floor(ds_map_find_value(global.game_data, "parts")))));
 
 draw_text(640, window_get_height()-12, "Score: " + string(floor(ds_map_find_value(global.game_data, "score"))));
+draw_text(750, window_get_height()-12, "Hi-Score: " + string(floor(global.highscore)));

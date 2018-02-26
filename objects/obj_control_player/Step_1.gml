@@ -1,8 +1,25 @@
 /// @description Cotrol inputs
 
+if(global.game_data[? "score"] > global.highscore) global.highscore = global.game_data[? "score"];
+
+var key_esc = keyboard_check_released(vk_escape);
+if(key_esc) {
+	room_goto(rm_menu);	
+}
 
 if(not instance_exists(control_target)) {
 	control_target = scr_closest_player_mothership(x, y);
+	
+	if(control_target == noone) {
+		gameover_timer += 1
+		global.game_data[? "metals"] = 0;
+		global.game_data[? "parts"] = 0;
+		global.game_data[? "gameover"] = true;
+		if(gameover_timer > 100) {
+			global.myscore = global.game_data[? "score"];
+			room_goto(rm_gameover);
+		}
+	}
 }
 
 if(instance_exists(control_target)) {

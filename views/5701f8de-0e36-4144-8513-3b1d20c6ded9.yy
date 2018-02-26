@@ -12,7 +12,11 @@
         "52a81bd2-8a44-4681-bec2-698d4fc4e6ac",
         "169c5aa2-ac12-4cba-bcef-5ed1989838a0",
         "1d86b606-96b7-4b58-a424-d2efae9a69e0",
-        "3e3cc695-7372-42bd-8a42-de5771e1fc8a"
+        "3e3cc695-7372-42bd-8a42-de5771e1fc8a",
+        "2b852428-36be-438c-86d9-8855f8ac6240",
+        "c3745c3f-0788-43c4-81c3-854770addb12",
+        "8f539646-e6e9-4e53-8435-b37641ec971e",
+        "306a845d-f840-4970-873e-bd1e060e05ae"
     ],
     "filterType": "GMObject",
     "folderName": "ui",

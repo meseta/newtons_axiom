@@ -4,6 +4,9 @@
 if(instance_exists(obj_control_player.control_target)) {
 	block_x = floor(obj_control_player.x/BLOCKSIZE);
 	block_y = floor(obj_control_player.y/BLOCKSIZE);
+	
+	if(is_undefined(last_block_x)) last_block_x = block_x;
+	if(is_undefined(last_block_y)) last_block_y = block_y;
 
 	if(block_x != last_block_x or block_y != last_block_y) { // entered a new block
 	
@@ -121,6 +124,7 @@ if(instance_exists(obj_control_player.control_target)) {
 			var travel_spd = random_range(3,5);
 			asteroid_inst.hspd = lengthdir_x(travel_spd, travel_dir);
 			asteroid_inst.vspd = lengthdir_y(travel_spd, travel_dir);
+			asteroid_inst.type = asteroid_choice;
 			scr_debug("spawned asteroid")
 				
 				
