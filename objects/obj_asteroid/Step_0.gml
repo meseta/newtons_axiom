@@ -1,6 +1,14 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+if(not object_is_ancestor(object_index, obj_mine)) {
+	var collision_inst = instance_place(x, y, obj_mine);
+
+	if(collision_inst != noone) {
+		hit_damage = max_hp;
+	}
+}
+
 if(mass) {
 	x += hspd;
 	y += vspd;

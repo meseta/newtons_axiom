@@ -26,3 +26,5 @@ fire_timer = 0;
 fire_timer_secondary = 0;
 
 unit_shake = 0;
+
+image_speed = 0;

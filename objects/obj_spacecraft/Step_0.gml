@@ -126,9 +126,11 @@ if(collision_inst != noone) {
 	// damage
 	var relspd = point_distance(hspd, vspd, collision_inst.hspd, collision_inst.vspd)
 	var allowed_landing_speed = landing_speed;
+	var dampening = 0.5
 	
 	if(mining_speed > 0 and object_is_ancestor(collision_inst.object_index, obj_mine)) { // special case: miners get triple landing speed on mines
 		allowed_landing_speed *= 3;
+		dampening = 0.2
 	}
 	
 	if(relspd > allowed_landing_speed) {
@@ -138,7 +140,7 @@ if(collision_inst != noone) {
 		else {
 			var other_mass = 250;	
 		}
-		var dmg = mass * other_mass * relspd / 500
+		var dmg = mass * other_mass * relspd / 750
 		hit_damage += dmg;
 		collision_inst.hit_damage += dmg;
 	}
@@ -147,14 +149,38 @@ if(collision_inst != noone) {
 	var this_spd = scr_2dcollide(id, collision_inst);
 	var other_spd = scr_2dcollide(collision_inst, id);
 	
-	hspd = this_spd[0]*0.5;
-	vspd = this_spd[1]*0.5;
-	collision_inst.hspd = other_spd[0]*0.5;
-	collision_inst.vspd = other_spd[1]*0.5;
+	hspd = this_spd[0]*dampening;
+	vspd = this_spd[1]*dampening;
+	collision_inst.hspd = other_spd[0]*dampening;
+	collision_inst.vspd = other_spd[1]*dampening;
 }
 
 x += hspd;
 y += vspd;
+
+var effective_spd = point_distance(xprevious, yprevious, x, y);
+if(effective_spd > 0.5) {
+	if(faction == FACTIONS.player) {
+		var part_color = c_green;
+	}
+	else {
+		var part_color = c_red;
+	}
+	var hdelta = (x-xprevious)/ceil(effective_spd);
+	var vdelta = (y-yprevious)/ceil(effective_spd);
+	for(var i=0; i<ceil(effective_spd); i++ ) {
+		if(object_index == obj_mothership or object_index == obj_battleship) {
+			part_particles_create_color(global.parttrail_sys, xprevious+i*hdelta + lengthdir_x(5, image_angle+90), yprevious+i*vdelta + lengthdir_y(5, image_angle+90), global.parttrail, part_color, 1)
+			part_particles_create_color(global.parttrail_sys, xprevious+i*hdelta + lengthdir_x(-5, image_angle+90), yprevious+i*vdelta + lengthdir_y(-5, image_angle+90), global.parttrail, part_color, 1)
+		}
+		else if(object_index == obj_miner) {
+			part_particles_create_color(global.parttrail_sys, xprevious+i*hdelta, yprevious+i*vdelta, global.parttrail, c_olive, 1)	
+		}
+		else {
+			part_particles_create_color(global.parttrail_sys, xprevious+i*hdelta, yprevious+i*vdelta, global.parttrail, part_color, 1)		
+		}
+	}
+}
 
 #endregion collision
 
@@ -224,7 +250,7 @@ if(mining_speed > 0) {
 			cargo = 0;
 		}
 		else {
-			var collision_inst = collision_circle(x, y, 16, obj_mothership, false, true);
+			var collision_inst = collision_circle(x, y, 10, obj_mothership, false, true);
 			if(collision_inst != noone) {
 				if(collision_inst.faction == faction) {
 					global.game_data[? "metals"] += cargo;
@@ -233,6 +259,11 @@ if(mining_speed > 0) {
 				}
 			}
 		}
+	}
+	
+	// sprite
+	if(image_number > 1) { 
+		image_index = ceil((image_number-1) * (cargo/max_cargo));
 	}
 }
 

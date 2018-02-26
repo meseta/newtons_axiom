@@ -5,5 +5,5 @@
 event_inherited();
 
 if(image_number > 1) {
-	image_index = ceil((image_number-1) * (1-resource/max_resource));
+	image_index = floor((image_number-1) * (1-resource/max_resource));
 }

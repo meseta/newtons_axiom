@@ -2,7 +2,7 @@
 // You can write your code in this editor
 
 x += hspd;
-y += hspd;
+y += vspd;
 
 hspd *= 0.99;
 vspd *= 0.99;

@@ -43,3 +43,11 @@ add_vspd *= 0.9;
 // Inherit the parent event
 event_inherited();
 
+var effective_spd = point_distance(xprevious, yprevious, x, y);
+if(effective_spd > 0.5) {
+	var hdelta = (x-xprevious)/ceil(effective_spd);
+	var vdelta = (y-yprevious)/ceil(effective_spd);
+	for(var i=0; i<ceil(effective_spd); i++ ) {
+		part_particles_create_color(global.parttrail_sys, xprevious+i*hdelta, yprevious+i*vdelta, global.parttrail, c_gray, 1)		
+	}
+}
