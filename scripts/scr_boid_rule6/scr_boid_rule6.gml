@@ -63,15 +63,17 @@ if(weapon != noone) {
 			
 		// fire!
 		if(closest_range < attack_max_range*1.2) {
-			act_primary = true
+			act_primary = true;
+			act_secondary = true;
 		}
 		else {
 			act_primary = false;
-		
+			act_secondary = false;
 		}
 	}
 	else {
-		act_primary = false;	
+		act_primary = false;
+		act_secondary = false;
 	}
 		
 }

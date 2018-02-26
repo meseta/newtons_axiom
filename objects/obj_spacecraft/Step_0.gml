@@ -220,6 +220,7 @@ if(mining_speed > 0) {
 
 #region attacking
 	fire_timer += 1;
+	fire_timer_secondary += 1;
 	
 	if(weapon != noone and act_primary and fire_timer > fire_rate) {
 		fire_timer = 0;
