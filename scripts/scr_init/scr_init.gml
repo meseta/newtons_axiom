@@ -1,7 +1,7 @@
 randomize();
 
-global.savename = "data.json"
-global.hiscorename = "hiscore.json"
+global.savename = "save.dat"
+global.hiscorename = "hiscore.dat"
 global.debug = 0 or debug_mode
 global.new_game = false;
 global.highscore = 0;

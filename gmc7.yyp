@@ -575,6 +575,14 @@
             }
         },
         {
+            "Key": "7758bb4e-8577-42a3-b3b3-6ebff9b5ea07",
+            "Value": {
+                "id": "dda6f2cc-5574-4511-a814-3e27f170e413",
+                "resourcePath": "sprites\\spr_icon\\spr_icon.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "791fb5dc-dafd-4a1d-a6a3-9cde31f0edd3",
             "Value": {
                 "id": "0fb2fe8a-3d37-4baa-9c57-b7258a8bb0c2",
@@ -727,6 +735,14 @@
             }
         },
         {
+            "Key": "9fc2c240-d66d-470a-a9ed-a821df37dfd2",
+            "Value": {
+                "id": "f8b71a22-b165-43c0-93d0-0c75174ef2b8",
+                "resourcePath": "datafiles_yy\\open_font_license.txt.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "a3234952-c1f4-48ee-a15b-c41565b246c3",
             "Value": {
                 "id": "103809f7-8875-42f7-aa0d-6e38fec3d4d9",
@@ -799,6 +815,14 @@
             }
         },
         {
+            "Key": "b85d2616-950d-4ca9-8e87-18720ef45d9f",
+            "Value": {
+                "id": "c03b42d7-e84d-4b2e-ab0b-768c70caa79e",
+                "resourcePath": "objects\\obj_ui_title\\obj_ui_title.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "b9fcd948-d45b-4777-be78-3fe2e1a536e3",
             "Value": {
                 "id": "759ffd9b-bd41-463c-b25a-9e9f36d181c6",
@@ -828,6 +852,14 @@
                 "id": "6e700bcc-3580-4e10-a3bb-0a1df2494fe0",
                 "resourcePath": "objects\\obj_ui_button_build_miner\\obj_ui_button_build_miner.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "c36e97b5-9676-4ab8-983a-1eccb951e5ea",
+            "Value": {
+                "id": "082f053f-24ed-4507-9f6a-6d556ad46dc6",
+                "resourcePath": "sprites\\spr_title\\spr_title.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -1083,6 +1115,14 @@
             "Value": {
                 "id": "41ff95c2-26a3-4b97-849b-005cad794097",
                 "resourcePath": "objects\\obj_enemy_fighter\\obj_enemy_fighter.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "fa71cf57-a1c8-4b20-808a-f1cc444fd8dd",
+            "Value": {
+                "id": "61447d43-1a29-452c-a94a-401cd0fc3fa4",
+                "resourcePath": "objects\\obj_ui_high_score\\obj_ui_high_score.yy",
                 "resourceType": "GMObject"
             }
         },
