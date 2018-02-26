@@ -5,7 +5,7 @@
 varying vec2 v_vTexcoord;
 varying vec4 v_vColour;
 const float blurSize = 1.0/1024.0;
-const float intensity = 0.5;
+const float intensity = 1.0;
 
 const float kernel0 = 0.13298;
 const float kernel1 = 0.125858;
