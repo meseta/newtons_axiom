@@ -1,5 +1,10 @@
 /// @description Cotrol inputs
 
+
+if(not instance_exists(control_target)) {
+	control_target = scr_closest_player_mothership(x, y);
+}
+
 if(instance_exists(control_target)) {
 	var mouse_timeout = 90;
 

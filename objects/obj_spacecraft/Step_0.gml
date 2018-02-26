@@ -69,16 +69,27 @@ if(move_amount == 0) {
 
 // max speed;
 spd = point_distance(0, 0, hspd, vspd)
+dir = point_direction(0, 0, hspd, vspd);
 if(spd > max_speed) {
-	var dir = point_direction(0, 0, hspd, vspd);
 	hspd = lengthdir_x(max_speed, dir);
 	vspd = lengthdir_y(max_speed, dir);
 	spd = max_speed;
 }
 
-
-
 #endregion movement
+
+
+#region rotation
+var target_angle = dir;
+if(turret == noone) { // rotates ship if no turret
+	if(act_primary or act_secondary) {
+		target_angle = aim_dir;
+	}
+}
+var dtheta = angle_difference(target_angle, image_angle);
+image_angle += clamp(dtheta, -rotate_rate, rotate_rate);
+
+#endregion rotation
 
 #region collision with asteroid
 
@@ -151,6 +162,9 @@ y += vspd;
 
 if(hit_damage) {
 	hp -= hit_damage;
+	
+	unit_shake = 2;
+	
 	hit_damage = 0;
 	
 	if(hp < 0) {
@@ -191,12 +205,14 @@ if(mining_speed > 0) {
 				// increase movement friction to slow down
 				hspd *= 0.9;
 				vspd *= 0.9;
+				
+				unit_shake = 1;
 			}
 		
 		}
 	}
 	else {
-		mining_delay = 0;	
+		mining_delay = 0;
 	}
 	
 	if(cargo > 0) { // switch cargo
@@ -248,6 +264,6 @@ if(mining_speed > 0) {
 		hspd -= lengthdir_x(projectile.spd, aim_dir)*projectile.mass/(mass*recoil_dampening);
 		vspd -= lengthdir_y(projectile.spd, aim_dir)*projectile.mass/(mass*recoil_dampening);
 	}
-#endregion
+#endregion attacking
 
 sprite_timer += 1;

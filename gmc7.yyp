@@ -79,6 +79,14 @@
             }
         },
         {
+            "Key": "095e836f-c468-4efc-977f-6d5642e9b4a6",
+            "Value": {
+                "id": "026001b3-e31f-4dd4-9787-feca718bc493",
+                "resourcePath": "sprites\\spr_turret2\\spr_turret2.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "09812ba2-8d0c-4046-9997-8ccb6150ccee",
             "Value": {
                 "id": "b1023b97-1894-48ce-8bd5-5b37c1d8529c",
@@ -140,6 +148,14 @@
                 "id": "42f6f651-ea97-4d26-b40c-634e109a3636",
                 "resourcePath": "objects\\obj_ui_button_build_frigate\\obj_ui_button_build_frigate.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "19dffb45-744f-4ab8-9952-aea2fa75bfc3",
+            "Value": {
+                "id": "2529032c-e6b4-40b8-b60d-872368803679",
+                "resourcePath": "sprites\\spr_enemy_turret2\\spr_enemy_turret2.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -260,6 +276,14 @@
                 "id": "93e007e8-4e34-42e5-a863-00b5803a96a3",
                 "resourcePath": "sprites\\spr_missile\\spr_missile.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "3e3cc695-7372-42bd-8a42-de5771e1fc8a",
+            "Value": {
+                "id": "3e24cd5d-2c00-4a35-8068-7c2cc0d58322",
+                "resourcePath": "objects\\obj_ui_button_build_mothership\\obj_ui_button_build_mothership.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -495,6 +519,14 @@
             }
         },
         {
+            "Key": "7f2edf97-af0a-4143-adab-6a60ac792e26",
+            "Value": {
+                "id": "436a44f9-10a8-48e6-bd44-56269836a381",
+                "resourcePath": "scripts\\scr_closest_player_mothership\\scr_closest_player_mothership.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "7f35b825-e8cf-439e-952b-d3df68e216b7",
             "Value": {
                 "id": "6f614e77-e577-4d97-836f-73d8133863dc",
@@ -508,6 +540,14 @@
                 "id": "be746c4e-1693-4888-a8f8-fc05a5344fd5",
                 "resourcePath": "views\\833fee72-3484-4626-a286-e104a179da9b.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "874b8770-9b17-48f3-b5be-e69d6eb36585",
+            "Value": {
+                "id": "e50631f5-3d57-4c4f-b597-bf96644a6e6d",
+                "resourcePath": "sprites\\spr_enemy_turret\\spr_enemy_turret.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -547,6 +587,14 @@
             "Value": {
                 "id": "59859d0d-fc8f-47d2-8a32-6f4d3fb2a985",
                 "resourcePath": "sprites\\spr_cannon\\spr_cannon.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "99332ed4-cfe1-4fe3-9939-1c034cdbd5e8",
+            "Value": {
+                "id": "b688720c-e223-49eb-a44b-2f6c71c8e7e0",
+                "resourcePath": "sprites\\spr_turret\\spr_turret.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -775,6 +823,14 @@
             }
         },
         {
+            "Key": "de4b8b5b-b5e5-48da-bb13-e73d2a9a0572",
+            "Value": {
+                "id": "376dffba-881a-49fb-908d-33db5a2de626",
+                "resourcePath": "sprites\\spr_turret_mothership\\spr_turret_mothership.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "e11ae598-2b9b-40f1-a957-e590cb75cdcb",
             "Value": {
                 "id": "766131bd-8ce5-48bc-8865-1649accdc408",
@@ -937,7 +993,8 @@
         "066ea7fe-c745-42ba-86f0-ef07cbc709fa",
         "08c3c3f5-5fbf-49fa-aa07-b4461d5f74b0",
         "e1256b11-8584-4961-bbc5-8ee543032b60",
-        "cc02375b-bdb3-4672-929b-489496d9e7c7"
+        "cc02375b-bdb3-4672-929b-489496d9e7c7",
+        "7f2edf97-af0a-4143-adab-6a60ac792e26"
     ],
     "tutorial": ""
 }

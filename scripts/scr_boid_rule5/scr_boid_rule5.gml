@@ -53,9 +53,9 @@ if(mining_speed > 0 and instance_exists(obj_control_player.control_target) and o
 		
 	}
 	else if(closest_mine != noone) { // instance nearby, go to it
-		var dir = point_direction(x, y, closest_mine.x, closest_mine.y);
-		xvect = lengthdir_x(closest_mine_range, dir)*5;
-		yvect = lengthdir_y(closest_mine_range, dir)*5;
+		var closest_dir = point_direction(x, y, closest_mine.x, closest_mine.y);
+		xvect = lengthdir_x(closest_mine_range, closest_dir)*10;
+		yvect = lengthdir_y(closest_mine_range, closest_dir)*10;
 	}
 	
 	vector[| 0] += xvect * weight;

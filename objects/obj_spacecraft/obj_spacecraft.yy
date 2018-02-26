@@ -257,6 +257,34 @@
             "value": "10",
             "varName": "fire_rate_secondary",
             "varType": 1
+        },
+        {
+            "id": "2cbc4470-a6bd-42ed-9563-ae432d457039",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "noone",
+            "varName": "turret",
+            "varType": 5
+        },
+        {
+            "id": "8fe00efe-e5af-4698-aa20-e2b0c99cf802",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "5",
+            "varName": "rotate_rate",
+            "varType": 0
         }
     ],
     "solid": false,

@@ -39,6 +39,8 @@ global.ship_build_metals[SHIPTYPES.frigate] = 100;
 global.ship_build_parts[SHIPTYPES.frigate] = 5;
 global.ship_build_metals[SHIPTYPES.battleship] = 500;
 global.ship_build_parts[SHIPTYPES.battleship] = 20;
+global.ship_build_metals[SHIPTYPES.mothership] = 2000;
+global.ship_build_parts[SHIPTYPES.mothership] = 50;
 
 enum FACTIONS {
 	hostile,

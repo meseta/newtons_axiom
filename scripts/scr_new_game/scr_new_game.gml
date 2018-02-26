@@ -2,8 +2,8 @@ global.game_data = ds_map_create();
 
 // resources
 if(global.debug or 1) {
-	ds_map_add(global.game_data, "metals", 1000);
-	ds_map_add(global.game_data, "parts", 50);
+	ds_map_add(global.game_data, "metals", 3000);
+	ds_map_add(global.game_data, "parts", 500);
 }
 else {
 	ds_map_add(global.game_data, "metals", 100);

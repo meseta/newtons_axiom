@@ -23,6 +23,14 @@
             "objectId": "adfe2c1d-a4ee-4e67-863c-5b1110e0a2be",
             "propertyId": "8e75b386-b665-419b-953e-89061fa51ea9",
             "value": "4"
+        },
+        {
+            "id": "80d4f4e7-ab21-4143-ac82-2caf63c21ca2",
+            "modelName": "GMOverriddenProperty",
+            "mvc": "1.0",
+            "objectId": "adfe2c1d-a4ee-4e67-863c-5b1110e0a2be",
+            "propertyId": "2cbc4470-a6bd-42ed-9563-ae432d457039",
+            "value": "spr_enemy_turret"
         }
     ],
     "parentObjectId": "4899d8bf-8913-4c21-964f-ac9686f06dfb",
