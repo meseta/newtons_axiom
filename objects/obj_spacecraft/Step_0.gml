@@ -56,10 +56,10 @@ var vforce = lengthdir_y(move_amount * thrust, move_dir);
 
 // sneaky friction/damping
 if(sign(hforce) != sign(hspd)) {
-	hforce -= sign(hspd) * hspd*hspd * fric;
+	hforce -= sign(hspd) * abs(hspd) * fric;
 }
 if(sign(vforce) != sign(vspd)) {
-	vforce -= sign(vspd) * vspd*vspd * fric;
+	vforce -= sign(vspd) * abs(vspd) * fric;
 }
 
 if(mass) {

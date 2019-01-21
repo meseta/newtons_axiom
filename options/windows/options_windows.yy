@@ -8,7 +8,7 @@
     "option_windows_company_info": "Mantissa Games",
     "option_windows_copy_exe_to_dest": false,
     "option_windows_copyright_info": "(c) 2018 Mantissa Games",
-    "option_windows_description_info": "A GMC  Jam 7 game",
+    "option_windows_description_info": "A GMC Jam 7 game",
     "option_windows_display_cursor": true,
     "option_windows_display_name": "Newton's Axiom",
     "option_windows_enable_steam": false,
