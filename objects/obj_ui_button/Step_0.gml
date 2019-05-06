@@ -3,8 +3,6 @@
 var x1 = xx+camera_get_view_x(view_camera[0])-sprite_xoffset;
 var y1 = yy+camera_get_view_y(view_camera[0])-sprite_yoffset;
 
-draw_rectangle(x1, y1, x1+sprite_width, y1+sprite_height, true);
-
 // mouse stuff
 var mx = mouse_x-view_xport[0];
 var my = mouse_y-view_yport[0];
